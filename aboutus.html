@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Inria+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet" />
+        
+    <style>
+        .footer h4 a, .header .nav-links a {
+            color: inherit; /* Inherit the color from the parent element */
+            text-decoration: none; /* Remove the underline */
+        }
+
+        .footer h4 a:visited, .header .nav-links a:visited {
+            color: inherit; /* Keep the original color for visited links */
+        }
+
+        .footer h4 a:hover, .header .nav-links a:hover {
+            color: #2773d6; /* Change to your desired hover color */
+        }
+
+        .header .nav-links a {
+            font-weight: bold; /* Make the header links bold */
+        }
+
+        .content-section {
+            margin: 40px auto; /* Center the section */
+            max-width: 800px; /* Limit the width of the section */
+            font-family: 'Inter', sans-serif;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section h1 {
+            font-family: 'Inria Sans', sans-serif;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .content-section h2 {
+            font-family: 'Inria Sans', sans-serif;
+            font-weight: 700;
+            color: #2773d6;
+            margin-bottom: 10px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .content-section h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #2773d6;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .content-section h3 {
+            font-family: 'Inria Sans', sans-serif;
+            font-weight: 700;
+            color: #2773d6;
+            margin-bottom: 10px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .content-section h3::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: #2773d6;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .content-section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: justify; /* Justify text */
+        }
+
+        .content-section .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .content-section button {
+            padding: 0.75rem 1.5rem;
+            background-color: #2773d6;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-bottom: 20px; /* Add some space below the button */
+        }
+
+        .content-section button:hover {
+            background-color: #1b5aad;
+        }
+
+        .leadership {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .leadership h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .leadership .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .leadership .team-member {
+            width: 150px;
+            margin: 1rem;
+            text-align: center;
+        }
+
+        .leadership .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .leadership .team-member h3 {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .leadership .team-member p {
+            font-size: 0.875rem;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-header">
+        <span>&nbsp;</span>
+    </div>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-container">
+            <div class="blue-logo"></div>
+        </div>
+        <div class="nav-links font-inria">
+            <div><a href="index.html">Home</a></div>
+            <div><a href="services.html">Services</a></div>
+            <div><a href="aboutus.html">About Us</a></div>
+            <div><a href="contact.html">Contact</a></div>
+        </div>
+        <div class="auth-links font-inter">
+            <div>
+                <div class="auth-link" style="background-image: url('./Resources/signup-icon.svg');"></div>
+                <div>
+                    <span>Sign Up</span>
+                </div>
+            </div>
+            <div>
+                <div class="auth-link" style="background-image: url('./Resources/login-icon.svg');"></div>
+                <div>
+                    <span>Login</span>
+                </div>
+            </div>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="mobile-nav font-inria" id="mobile-nav">
+        <div>Home</div>
+        <div>Services</div>
+        <div>About Us</div>
+        <div>Contact</div>
+        <div>Sign Up</div>
+        <div>Login</div>
+    </div>
+
+    <!-- Banner Image -->
+    <div class="banner banner-about">
+        <div class="banner-content">
+            <div style="width: 28vw;">
+                <span class="font-inria" style="font-size: 2.5rem;font-weight: 600;color: #FFFFFF;line-height: 1;">
+                    Start your journey with Imaven
+                </span>
+            </div>
+            <div style="width: 34vw;margin-top: 1vh;">
+                <span class="font-inter" style="font-size: 1rem;color: #FFFFFF;font-weight: 400">
+                    Quickly find the advice you need — just type your question below and let our AI guide you to the
+                    right expert.
+                </span>
+            </div>
+            <div class="line"></div>
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" class="search-input font-inter" placeholder="Type your question here...">
+                    <div class="search-button" id="searchButton">
+                        <img src="./Resources/search-img.svg" style="width: 2vw;height: 2vh;" />
+                    </div>
+                </div>
+                <div class="category-container font-inter">
+                    <div class="category">Financial Planning</div>
+                    <div class="category">Health and Wellness</div>
+                    <div class="category">Shopping</div>
+                    <div class="category">Career Coaching</div>
+                    <div class="category">Personal Development and Life</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-section">
+        <h1>Who We Are: About iMaven</h1>
+        <h3>Pioneering Advisory Excellence</h3>
+        <p>At iMaven, we're redefining how individuals and businesses access expert advice. We are a dynamic platform that connects users with top-tier experts across multiple disciplines including finance, health and wellness, personal development, and shopping. Our mission is to make specialized knowledge accessible to everyone, anywhere, enhancing decision-making with precision and ease.</p>
+      
+        <h3>Innovation Through Technology</h3>
+        <p>Our core strength lies in the integration of advanced AI technologies with human expertise. This synergy not only speeds up the process but also enhances the accuracy and relevance of the advice provided.</p>
+        
+        <h3>Dedicated to User Success</h3>
+        <p>We believe that the right advice can be transformative. That's why we are committed to ensuring our users receive guidance that is tailored to their unique needs, helping them to achieve personal and professional milestones.</p>
+        
+        <h3>Secure and Empowering Platform</h3>
+        <p>At iMaven, your security and privacy are paramount. We employ state-of-the-art security measures to protect your interactions and data, offering a safe and trustworthy environment for users and advisors alike.</p>
+        
+        <h3>Vision for the Future</h3>
+        <p>Driven by innovation and a commitment to excellence, iMaven continues to evolve. We aim to expand our services, embracing new categories and technologies to keep delivering exceptional value.</p>
+        
+        <p>Join us at iMaven—where insights lead to action, and expert advice is just a click away.</p>
+        <div class="content-wrapper">
+            <button onclick="window.location.href='contact.html'">Contact Us</button>
+        </div>
+        <img src="./Resources/team.png" alt="Team Photo" class="team-photo">
+    </div>
+
+    <div class="leadership">
+        <h2>Experienced leadership paving the way for success</h2>
+        <div class="team">
+            <div class="team-member">
+                <img src="./Resources/vitaly pic2.png" alt="Leader 1">
+                <h3>Leader Name</h3>
+                <p>CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="./Resources/vitaly pic2.png" alt="Leader 2">
+                <h3>Leader Name</h3>
+                <p>CPO & Co-founder</p>
+            </div>
+            <div class="team-member">
+                <img src="./Resources/vitaly pic2.png" alt="Leader 3">
+                <h3>Leader Name</h3>
+                <p>Chief Strategy & Co-founder</p>
+            </div>
+            <!-- Add more team members as needed -->
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer font-inter">
+        <div>
+            <h4><a href="index.html">NAVIGATE</a></h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4><a href="aboutus.html">COMPANY INFO</a></h4>
+            <ul>
+                <li><a href="aboutus.html">About Imaven</a></li>
+                <li><a href="whyimaven.html">Why Imaven</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4><a href="help.html">RESOURCES</a></h4>
+            <ul>
+                <li><a href="help.html">Help & FAQ</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="#">Cookies</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4><a href="policies.html">POLICIES</a></h4>
+            <ul>
+                <li><a href="policies.html">Trade Mark</a></li>
+                <li><a href="policies.html">Terms of Service</a></li>
+                <li><a href="policies.html">Privacy Policy</a></li>
+                <li><a href="policies.html">Copyright Protection</a></li>
+                <li><a href="policies.html">Disclaimers</a></li>
+                <li><a href="policies.html">Accessibility Compliance Statement</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4><a href="contact.html">CONNECT WITH US</a></h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com"><img src="./Resources/facebook-icon.svg" alt="Facebook"></a>
+                <a href="https://www.twitter.com"><img src="./Resources/twitter-icon.svg" alt="X (formerly Twitter)"></a>
+                <a href="https://www.linkedin.com"><img src="./Resources/linkedin-icon.svg" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer" style="padding-top: 40px;">
+        <div style="background-color: #D9D9D9;width: 100%;height: 0.5px;">
+            <span>&nbsp;</span>
+        </div>
+    </div>
+    <div class="footer copyright">
+        <div style="display: flex;flex: unset;width: 38%;align-items: center;">
+            <div class="logo-container" style="display: inline-block;width: 100px;flex:none">
+                <div class="white-logo"></div>
+            </div>
+            <div><span class="font-inter">Accelerating answers, amplifying expertise</span></div>
+        </div>
+        <div style="text-align: right;">
+            <p class="font-inter">Copyright &copy; 2024, imavenai.com</p>
+        </div>
+    </div>
+
+    <script>
+        const items = document.querySelectorAll('.carousel-item');
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        let currentItem = 0;
+
+        document.getElementById('next').addEventListener('click', () => {
+            items[currentItem].classList.remove('active');
+            currentItem = (currentItem + 1) % items.length;
+            items[currentItem].classList.add('active');
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            items[currentItem].classList.remove('active');
+            currentItem = (currentItem - 1 + items.length) % items.length;
+            items[currentItem].classList.add('active');
+        });
+
+        hamburger.addEventListener('click', () => {
+            if (mobileNav.classList.contains('open')) {
+                mobileNav.classList.remove('open');
+                mobileNav.style.display = 'none';
+            } else {
+                mobileNav.classList.add('open');
+                mobileNav.style.display = 'flex';
+            }
+            hamburger.classList.toggle('open');
+        });
+
+        document.getElementById('searchButton').addEventListener('click', function () {
+            const query = document.getElementById('searchInput').value;
+            alert('Searching for: ' + query);
+            // Add your search functionality here
+        });
+
+        document.querySelectorAll('.category').forEach(category => {
+            category.addEventListener('click', function () {
+                const query = this.textContent;
+                document.getElementById('searchInput').value = query;
+                alert('Selected category: ' + query);
+                // Add your category search functionality here
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
