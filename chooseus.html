@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMaven</title>
+    <title>iMaven</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Inria+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="./style.css" rel="stylesheet" />
-        
+    <link rel="stylesheet" type="text/css" href="http://localhost:3030/files/widget.css?api_key=api_key1">
+    <script src="http://localhost:3030/files/widget?api_key=api_key1"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
     <style>
         .footer h4 a, .header .nav-links a {
             color: inherit; /* Inherit the color from the parent element */
@@ -25,15 +27,28 @@
         .header .nav-links a {
             font-weight: bold; /* Make the header links bold */
         }
+        
+        .social-icons img {
+            transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1); /* Scale up the image slightly on hover */
+        }
 
         .content-section {
             margin: 40px auto; /* Center the section */
             max-width: 800px; /* Limit the width of the section */
             font-family: 'Inter', sans-serif;
             padding: 20px;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section h1 {
+            font-family: 'Inria Sans', sans-serif;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 20px;
+            text-align: left;
         }
 
         .content-section h2 {
@@ -77,10 +92,10 @@
             <div class="blue-logo"></div>
         </div>
         <div class="nav-links font-inria">
-            <div><a href="index.html">Home</a></div>
-            <div><a href="services.html">Services</a></div>
-            <div><a href="aboutus.html">About Us</a></div>
-            <div><a href="contact.html">Contact</a></div>
+            <div><a href="home-loader.html">Home</a></div>
+            <div><a href="services-loader.html">Services</a></div>
+            <div><a href="aboutus-loader.html">About Us</a></div>
+            <div><a href="contact-loader.html">Contact</a></div>
         </div>
         <div class="auth-links font-inter">
             <div>
@@ -112,7 +127,7 @@
         <div class="banner-content">
             <div style="width: 28vw;">
                 <span class="font-inria" style="font-size: 2.5rem;font-weight: 600;color: #FFFFFF;line-height: 1;">
-                    Start your journey with Imaven
+                    Start your journey with imaven
                 </span>
             </div>
             <div style="width: 34vw;margin-top: 1vh;">
@@ -125,12 +140,12 @@
             <div class="search-container">
                 <div class="search-box">
                     <input type="text" id="searchInput" class="search-input font-inter"
-                        placeholder="Type your question here...">
-                    <div class="search-button" id="searchButton">
+                        placeholder="Expert matching feature coming soon!" disabled>
+                    <div class="search-button disabled" id="searchButton">
                         <img src="./Resources/search-img.svg" style="width: 2vw;height: 2vh;" />
                     </div>
                 </div>
-                <div class="category-container font-inter">
+                <div class="category-container font-inter disabled">
                     <div class="category">Financial Planning</div>
                     <div class="category">Health and Wellness</div>
                     <div class="category">Shopping</div>
@@ -141,112 +156,95 @@
         </div>
     </div>
 
-    <!-- Content Section -->
     <div class="content-section">
+        <h1>Why Choose Us</h1>
+    
         <h2>Credibility</h2>
         <p>
-            We rigorously vet all advisers, showcasing their credentials and user reviews to ensure you connect with
-            trusted professionals who have proven expertise. Each adviser undergoes a comprehensive background check
-            and verification process, providing you with peace of mind and confidence in their abilities.
+            At iMaven, we set the gold standard for adviser credibility. Our rigorous vetting process goes beyond basic checks, incorporating AI-powered background analysis and peer reviews to ensure only the most qualified experts join our platform. Each adviser's profile showcases verified credentials, detailed experience, and authentic user reviews, providing you with a comprehensive view of their expertise.
         </p>
         <p>
-            Additionally, our platform features a robust rating and review system, enabling clients to share their
-            experiences and provide feedback on the services they receive. This transparency fosters a community of
-            trust and helps you make informed decisions when selecting an adviser.
+            Our innovative rating system uses advanced algorithms to weigh various factors, including client satisfaction, advice accuracy, and problem-solving effectiveness. This multifaceted approach to credibility ensures you can make informed decisions with confidence, knowing you're connecting with true industry leaders.
         </p>
-
+    
         <h2>Flexibility</h2>
         <p>
-            Imaven offers various consultation models and customizable advisory services to cater to your specific
-            needs, ensuring you receive the guidance you desire in the way that suits you best. Whether you prefer
-            one-on-one sessions, group workshops, or digital consultations, we have options to match your lifestyle
-            and preferences.
+            iMaven redefines flexibility in advisory services. Our AI-driven platform offers unparalleled customization, allowing you to tailor every aspect of your consultation experience. Whether you prefer real-time video sessions, asynchronous text-based consultations, or immersive virtual reality meetings, iMaven adapts to your unique preferences and schedule.
         </p>
         <p>
-            Our advisers are available across multiple time zones and languages, making it easy for you to access
-            expert advice whenever and wherever you need it. We also offer flexible payment options, allowing you to
-            choose the most convenient method for your consultations.
+            We've broken down geographical barriers, offering 24/7 access to global experts across multiple languages and time zones. Our smart scheduling system even suggests optimal meeting times based on your past behavior and current commitments. With flexible payment options, including pay-per-minute models and subscription plans, iMaven ensures that expert advice fits seamlessly into your lifestyle and budget.
         </p>
-
+    
         <h2>Security</h2>
         <p>
-            Your transactions are safeguarded with our secure escrow system, giving you peace of mind knowing your
-            financial interactions are protected. Our platform utilizes state-of-the-art encryption and security
-            protocols to ensure the confidentiality and integrity of your personal and financial information.
+            Security at iMaven goes beyond industry standards. Our cutting-edge blockchain-based escrow system not only protects your financial transactions but also ensures the integrity of the advice you receive. We employ military-grade encryption for all communications and data storage, safeguarding your personal and financial information with uncompromising vigilance.
         </p>
         <p>
-            In addition, we continuously monitor our systems for any potential security threats and regularly update
-            our protocols to stay ahead of emerging risks. Our dedicated security team is always on hand to address
-            any concerns and provide support if needed.
+            Our AI-powered threat detection system continuously monitors for potential security risks, adapting in real-time to emerging threats. Regular third-party audits and penetration tests keep our security measures at the forefront of technological advancement. With iMaven, you can focus on getting the advice you need, knowing that your security is our top priority.
         </p>
-
+    
         <h2>Value</h2>
         <p>
-            Imaven provides exceptional advisory services at competitive rates, ensuring you get outstanding value
-            without compromising on quality. We believe that expert advice should be accessible to everyone, which is
-            why we offer a range of pricing plans to suit different budgets.
+            iMaven is committed to democratizing access to world-class expertise. Our AI-optimized pricing model dynamically balances affordability with quality, ensuring you receive exceptional value for every consultation. We've introduced innovative features like micro-consultations and AI-enhanced follow-ups, maximizing the impact of your investment in expert advice.
         </p>
         <p>
-            Our advisers are committed to delivering high-quality, actionable insights that help you achieve your
-            goals. By leveraging the latest technologies and best practices, we ensure that you receive the maximum
-            benefit from your consultations.
+            Our platform's unique collaborative features allow multiple experts to contribute to complex queries, providing you with comprehensive, multi-disciplinary insights at competitive rates. By leveraging AI to streamline administrative tasks, our advisers can focus more time on delivering high-impact, actionable advice, further enhancing the value you receive.
         </p>
-
+    
         <h2>Support</h2>
         <p>
-            Our customer care team is available around the clock to assist you with any inquiries, ensuring seamless
-            experiences anytime, anywhere. Whether you need help navigating the platform, scheduling a consultation,
-            or resolving an issue, our support staff is here to help.
+            At iMaven, support isn't just a service—it's a cornerstone of our platform. Our AI-powered support system provides instant, personalized assistance 24/7, capable of handling complex queries and guiding you through every aspect of the platform. For matters requiring a human touch, our dedicated support team of advisory experts is always ready to provide nuanced, empathetic assistance.
         </p>
         <p>
-            We also provide a comprehensive knowledge base and FAQ section on our website, offering self-service
-            solutions for common questions and issues. Our goal is to ensure that you have all the resources and
-            support you need to make the most of your experience with Imaven.
+            We've revolutionized self-service support with our interactive, AI-driven knowledge base that learns and evolves based on user interactions. This system not only answers your questions but anticipates your needs, providing proactive guidance to enhance your iMaven experience. From platform navigation to post-consultation follow-ups, we ensure you have all the resources and support needed to maximize the value of every interaction on iMaven.
         </p>
     </div>
 
     <!-- footer -->
     <div class="footer font-inter">
         <div>
-            <h4><a href="index.html">NAVIGATE</a></h4>
+            <h4><a href="home-loader.html">NAVIGATE</a></h4>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="home-loader.html">Home</a></li>
+                <li><a href="services-loader.html">Services</a></li>
+                <li><a href="contact-loader.html">Contact Us</a></li>
             </ul>
         </div>
         <div>
-            <h4><a href="aboutus.html">COMPANY INFO</a></h4>
+            <h4><a href="aboutus-loader.html">COMPANY INFO</a></h4>
             <ul>
-                <li><a href="aboutus.html">About Imaven</a></li>
-                <li><a href="whyimaven.html">Why Imaven</a></li>
+                <li><a href="aboutus-loader.html">About Imaven</a></li>
+                <li><a href="whyimaven-loader.html">Why Imaven</a></li>
             </ul>
         </div>
         <div>
-            <h4><a href="help.html">RESOURCES</a></h4>
+            <h4><a href="help-loader.html">RESOURCES</a></h4>
             <ul>
-                <li><a href="help.html">Help & FAQ</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="help-loader.html">Help & FAQ</a></li>
+                <li><a href="sitemap-loader.html">Sitemap</a></li>
                 <li><a href="#">Cookies</a></li>
             </ul>
         </div>
         <div>
-            <h4><a href="policies.html">POLICIES</a></h4>
+            <h4><a href="policies-loader.html">POLICIES</a></h4>
             <ul>
-                <li><a href="policies.html">Trade Mark</a></li>
-                <li><a href="policies.html">Terms of Service</a></li>
-                <li><a href="policies.html">Privacy Policy</a></li>
-                <li><a href="policies.html">Copyright Protection</a></li>
-                <li><a href="policies.html">Disclaimers</a></li>
-                <li><a href="policies.html">Accessibility Compliance Statement</a></li>
+                <li><a href="policies-loader.html">Trade Mark</a></li>
+                <li><a href="policies-loader.html">Terms of Service</a></li>
+                <li><a href="policies-loader.html">Privacy Policy</a></li>
+                <li><a href="policies-loader.html">Copyright Protection</a></li>
+                <li><a href="policies-loader.html">Disclaimers</a></li>
+                <li><a href="policies-loader.html">Accessibility Compliance Statement</a></li>
             </ul>
         </div>
         <div>
-            <h4><a href="contact.html">CONNECT WITH US</a></h4>
+            <h4><a href="contact-loader.html">CONNECT WITH US</a></h4>
             <div class="social-icons">
-                <a href="https://www.facebook.com"><img src="./Resources/facebook-icon.svg" alt="Facebook"></a>
-                <a href="https://www.twitter.com"><img src="./Resources/twitter-icon.svg" alt="X (formerly Twitter)"></a>
-                <a href="https://www.linkedin.com"><img src="./Resources/linkedin-icon.svg" alt="LinkedIn"></a>
+                <a href="https://www.facebook.com/profile.php?id=61553697504167"><img src="./Resources/facebook-icon.svg" alt="Facebook"></a>
+                <a href="https://www.linkedin.com/in/imaven-ai-85a4792ab/"><img src="./Resources/linkedin-icon.svg" alt="LinkedIn"></a>
+                <a href="https://x.com/imavenai"><img src="./Resources/twitter-icon.svg" alt="X (formerly Twitter)"></a>
+                <a href="https://www.instagram.com/imavenai/"><img src="./Resources/instagram.svg" alt="instagram"></a>
+                <a href="https://www.tiktok.com/@imavenai"><img src="./Resources/tiktok.svg" alt="TikTok"></a>
+                <a href="https://www.youtube.com/@ImavenAi"><img src="./Resources/youtube.svg" alt="YouTube"></a>
             </div>
         </div>
     </div>
@@ -268,47 +266,76 @@
     </div>
 
     <script>
-        const items = document.querySelectorAll('.carousel-item');
-        const hamburger = document.getElementById('hamburger');
-        const mobileNav = document.getElementById('mobile-nav');
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('DOM fully loaded and parsed');
 
-        let currentItem = 0;
+            const items = document.querySelectorAll('.carousel-item');
+            const hamburger = document.getElementById('hamburger');
+            const mobileNav = document.getElementById('mobile-nav');
+            const searchButton = document.getElementById('searchButton');
+            const searchInput = document.getElementById('searchInput');
 
-        document.getElementById('next').addEventListener('click', () => {
-            items[currentItem].classList.remove('active');
-            currentItem = (currentItem + 1) % items.length;
-            items[currentItem].classList.add('active');
-        });
-
-        document.getElementById('prev').addEventListener('click', () => {
-            items[currentItem].classList.remove('active');
-            currentItem = (currentItem - 1 + items.length) % items.length;
-            items[currentItem].classList.add('active');
-        });
-
-        hamburger.addEventListener('click', () => {
-            if (mobileNav.classList.contains('open')) {
-                mobileNav.classList.remove('open');
-                mobileNav.style.display = 'none';
-            } else {
-                mobileNav.classList.add('open');
-                mobileNav.style.display = 'flex';
+            if (!items || !hamburger || !mobileNav || !searchButton || !searchInput) {
+                console.error('One or more elements are missing:', {
+                    items,
+                    hamburger,
+                    mobileNav,
+                    searchButton,
+                    searchInput
+                });
+                return;
             }
-            hamburger.classList.toggle('open');
-        });
 
-        document.getElementById('searchButton').addEventListener('click', function () {
-            const query = document.getElementById('searchInput').value;
-            alert('Searching for: ' + query);
-            // Add your search functionality here
-        });
+            let currentItem = 0;
 
-        document.querySelectorAll('.category').forEach(category => {
-            category.addEventListener('click', function () {
-                const query = this.textContent;
-                document.getElementById('searchInput').value = query;
-                alert('Selected category: ' + query);
-                // Add your category search functionality here
+            const nextButton = document.getElementById('next');
+            if (nextButton) {
+                nextButton.addEventListener('click', () => {
+                    items[currentItem].classList.remove('active');
+                    currentItem = (currentItem + 1) % items.length;
+                    items[currentItem].classList.add('active');
+                });
+            } else {
+                console.warn('Next button not found');
+            }
+
+            const prevButton = document.getElementById('prev');
+            if (prevButton) {
+                prevButton.addEventListener('click', () => {
+                    items[currentItem].classList.remove('active');
+                    currentItem = (currentItem - 1 + items.length) % items.length;
+                    items[currentItem].classList.add('active');
+                });
+            } else {
+                console.warn('Previous button not found');
+            }
+
+            hamburger.addEventListener('click', () => {
+                if (mobileNav.classList.contains('open')) {
+                    mobileNav.classList.remove('open');
+                    mobileNav.style.display = 'none';
+                } else {
+                    mobileNav.classList.add('open');
+                    mobileNav.style.display = 'flex';
+                }
+                hamburger.classList.toggle('open');
+            });
+
+            searchButton.addEventListener('click', function () {
+                const query = searchInput.value;
+                console.log('Searching for:', query);
+                alert('Searching for: ' + query);
+                // Add your search functionality here
+            });
+
+            document.querySelectorAll('.category').forEach(category => {
+                category.addEventListener('click', function () {
+                    const query = this.textContent;
+                    searchInput.value = query;
+                    console.log('Selected category:', query);
+                    alert('Selected category: ' + query);
+                    // Add your category search functionality here
+                });
             });
         });
     </script>

@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMaven</title>
+    <title>iMaven</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Inria+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="./style.css" rel="stylesheet" />
-        
+    <link rel="stylesheet" type="text/css" href="http://localhost:3030/files/widget.css?api_key=api_key1">
+    <script src="http://localhost:3030/files/widget?api_key=api_key1"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
     <style>
         .footer h4 a, .header .nav-links a {
             color: inherit; /* Inherit the color from the parent element */
@@ -31,9 +33,6 @@
             max-width: 800px; /* Limit the width of the section */
             font-family: 'Inter', sans-serif;
             padding: 20px;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .content-section h2 {
@@ -96,6 +95,15 @@
         .content-section ul li strong {
             color: #2773d6;
         }
+                
+        .social-icons img {
+            transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1); /* Scale up the image slightly on hover */
+        }
+
     </style>
 
 </head>
@@ -110,10 +118,10 @@
             <div class="blue-logo"></div>
         </div>
         <div class="nav-links font-inria">
-            <div><a href="index.html">Home</a></div>
-            <div><a href="services.html">Services</a></div>
-            <div><a href="aboutus.html">About Us</a></div>
-            <div><a href="contact.html">Contact</a></div>
+            <div><a href="home-loader.html">Home</a></div>
+            <div><a href="services-loader.html">Services</a></div>
+            <div><a href="aboutus-loader.html">About Us</a></div>
+            <div><a href="contact-loader.html">Contact</a></div>
         </div>
         <div class="auth-links font-inter">
             <div>
@@ -145,7 +153,7 @@
         <div class="banner-content">
             <div style="width: 28vw;">
                 <span class="font-inria" style="font-size: 2.5rem;font-weight: 600;color: #FFFFFF;line-height: 1;">
-                    Start your journey with Imaven
+                    Start your journey with imaven
                 </span>
             </div>
             <div style="width: 34vw;margin-top: 1vh;">
@@ -156,12 +164,13 @@
             <div class="line"></div>
             <div class="search-container">
                 <div class="search-box">
-                    <input type="text" id="searchInput" class="search-input font-inter" placeholder="Type your question here...">
-                    <div class="search-button" id="searchButton">
+                    <input type="text" id="searchInput" class="search-input font-inter" 
+                        placeholder="Expert matching feature coming soon" disabled>
+                    <div class="search-button disabled" id="searchButton">
                         <img src="./Resources/search-img.svg" style="width: 2vw;height: 2vh;" />
                     </div>
                 </div>
-                <div class="category-container font-inter">
+                <div class="category-container font-inter disabled">
                     <div class="category">Financial Planning</div>
                     <div class="category">Health and Wellness</div>
                     <div class="category">Shopping</div>
@@ -174,94 +183,105 @@
 
     <!-- Content Section -->
     <div class="content-section">
-        <h2>Welcome to Imaven Insights</h2>
+        <h2>Welcome to iMaven Insights</h2>
         <p>
-            Your go-to resource for the latest market trends, best practices in advisory, educational resources, and updates on AI enhancements. Dive into our comprehensive guides, expert analysis, and cutting-edge updates designed to empower both users and advisers.
+            Dive into the future of advisory services with iMaven Insights – your ultimate resource for cutting-edge market trends, innovative best practices, comprehensive educational materials, and the latest in AI advancements. Our platform combines expert analysis with AI-driven insights to empower both advisers and clients, keeping you at the forefront of your industry.
         </p>
         
         <h3>Market Trends and Analysis</h3>
         <p>
-            Stay ahead of the curve with in-depth analyses of current market dynamics and future trends affecting various industries. Our detailed reports help advisers and clients make informed decisions based on the latest data and forecasts.
+            Stay ahead of the curve with our AI-enhanced market analyses. Our advanced algorithms process vast amounts of data to provide you with unparalleled insights into current market dynamics and future trends across various industries.
         </p>
         <ul>
-            <li><strong>Global Financial Advisory Market Outlook:</strong> Explore our annual market analysis report detailing growth trends, major players, and future predictions in financial advisory services.</li>
-            <li><strong>Health and Wellness Trends:</strong> Understand the factors driving changes in the health and wellness sector, including consumer behavior and technological advancements.</li>
+            <li><strong>Global Financial Advisory Market Outlook:</strong> Access our AI-generated annual report that not only details growth trends and major players but also predicts future disruptions and opportunities in financial advisory services with unprecedented accuracy.</li>
+            <li><strong>Health and Wellness Industry Evolution:</strong> Explore our interactive dashboard showcasing real-time consumer behavior shifts, technological advancements, and emerging niches in the health and wellness sector.</li>
+            <li><strong>Personalized Trend Alerts:</strong> Receive AI-curated alerts on trends specific to your areas of expertise, ensuring you're always informed about the most relevant developments in your field.</li>
         </ul>
         
         <h3>Advisory Best Practices</h3>
         <p>
-            Enhance your advisory practice with our expertly curated best practices and strategies. These guides are designed to improve your consultancy effectiveness and client satisfaction.
+            Elevate your advisory skills with our AI-optimized best practices and strategies. Our machine learning algorithms analyze thousands of successful advisory interactions to distill the most effective techniques.
         </p>
         <ul>
-            <li><strong>Effective Communication Techniques:</strong> Learn how to enhance your client interactions with these proven communication strategies.</li>
-            <li><strong>Advisory Ethics and Compliance:</strong> Stay updated with the latest in regulatory requirements and ethical standards to ensure your practices are up to date.</li>
+            <li><strong>AI-Powered Communication Enhancement:</strong> Utilize our real-time communication analysis tool during client interactions to receive subtle prompts for improving your communication effectiveness.</li>
+            <li><strong>Ethical Advisory Framework:</strong> Access our continuously updated, AI-monitored ethical guidelines that adapt to the latest regulatory changes and industry standards across global markets.</li>
+            <li><strong>Personalized Skill Development:</strong> Engage with our AI coach that identifies your strengths and areas for improvement, providing tailored exercises to enhance your advisory capabilities.</li>
         </ul>
         
         <h3>Educational Resources</h3>
         <p>
-            Our educational resources provide learning materials and training guides to help advisers and clients grow their knowledge and skills in various domains.
+            Expand your knowledge and skills with our comprehensive, AI-enhanced learning ecosystem. Our platform adapts to your learning style and professional needs, offering personalized educational journeys.
         </p>
         <ul>
-            <li><strong>Continuing Education for Financial Advisers:</strong> Access courses and workshops designed to keep you informed about the latest financial planning strategies and tools.</li>
-            <li><strong>Health and Wellness Certification Programs:</strong> Explore certification programs that enhance your credibility and expertise in health and wellness advising.</li>
+            <li><strong>Adaptive Learning for Financial Advisers:</strong> Experience our AI-driven courses that adjust in real-time to your progress, focusing on areas where you need the most development in financial planning strategies and tools.</li>
+            <li><strong>Virtual Reality Wellness Coaching Simulations:</strong> Immerse yourself in lifelike scenarios to practice and perfect your health and wellness advising skills in a risk-free, AI-evaluated environment.</li>
+            <li><strong>Cross-Disciplinary Knowledge Synthesis:</strong> Explore our AI-generated content that combines insights from various fields, helping you develop a holistic advisory approach.</li>
         </ul>
         
         <h3>AI Enhancements and Updates</h3>
         <p>
-            Discover the latest advancements in AI technology and how they are integrated into the Imaven platform to provide enhanced advisory services.
+            Stay at the cutting edge of AI technology in advisory services. Our dedicated AI research team continually develops and integrates new features to enhance your iMaven experience.
         </p>
         <ul>
-            <li><strong>New AI Features in Imaven:</strong> Learn about the newest AI tools and features we’ve integrated into our platform and how they can help streamline your advisory services.</li>
-            <li><strong>AI Ethics and Future Outlook:</strong> Dive into discussions about AI ethics, the future of AI in advisory services, and how Imaven is leading the way.</li>
+            <li><strong>Predictive Advisory AI:</strong> Discover how our newly integrated predictive AI can help you anticipate client needs and market shifts before they occur, allowing for proactive advisory strategies.</li>
+            <li><strong>AI Ethics Compliance Checker:</strong> Utilize our groundbreaking tool that automatically reviews your advisory practices against evolving AI ethics standards, ensuring your services remain compliant and trustworthy.</li>
+            <li><strong>Quantum Computing Integration Roadmap:</strong> Get exclusive insights into how iMaven plans to leverage quantum computing to revolutionize data analysis and predictive modeling in advisory services.</li>
         </ul>
         
         <p>
-            Explore these insights to stay knowledgeable, ethical, and innovative in your advisory practices. Whether you're looking to enhance your skills or stay ahead of industry trends, Imaven Insights is here to support your growth and success.
+            Harness the power of iMaven Insights to transform your advisory practice. Whether you're aiming to refine your skills, stay ahead of industry trends, or pioneer new advisory approaches, our AI-enhanced platform is your partner in achieving unprecedented growth and success.
         </p>
+    
+        <div class="cta-container disabled">
+            <a href="#explore-insights" class="cta-button">Explore iMaven Insights Now</a>
+        </div>
     </div>
 
     <!-- footer -->
     <div class="footer font-inter">
         <div>
-            <h4><a href="index.html">NAVIGATE</a></h4>
+            <h4><a href="home-loader.html">NAVIGATE</a></h4>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="home-loader.html">Home</a></li>
+                <li><a href="services-loader.html">Services</a></li>
+                <li><a href="contact-loader.html">Contact Us</a></li>
             </ul>
         </div>
         <div>
-            <h4><a href="aboutus.html">COMPANY INFO</a></h4>
+            <h4><a href="aboutus-loader.html">COMPANY INFO</a></h4>
             <ul>
-                <li><a href="aboutus.html">About Imaven</a></li>
-                <li><a href="whyimaven.html">Why Imaven</a></li>
+                <li><a href="aboutus-loader.html">About Imaven</a></li>
+                <li><a href="whyimaven-loader.html">Why Imaven</a></li>
             </ul>
         </div>
         <div>
-            <h4><a href="help.html">RESOURCES</a></h4>
+            <h4><a href="help-loader.html">RESOURCES</a></h4>
             <ul>
-                <li><a href="help.html">Help & FAQ</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="help-loader.html">Help & FAQ</a></li>
+                <li><a href="sitemap-loader.html">Sitemap</a></li>
                 <li><a href="#">Cookies</a></li>
             </ul>
         </div>
         <div>
-            <h4><a href="policies.html">POLICIES</a></h4>
+            <h4><a href="policies-loader.html">POLICIES</a></h4>
             <ul>
-                <li><a href="policies.html">Trade Mark</a></li>
-                <li><a href="policies.html">Terms of Service</a></li>
-                <li><a href="policies.html">Privacy Policy</a></li>
-                <li><a href="policies.html">Copyright Protection</a></li>
-                <li><a href="policies.html">Disclaimers</a></li>
-                <li><a href="policies.html">Accessibility Compliance Statement</a></li>
+                <li><a href="policies-loader.html">Trade Mark</a></li>
+                <li><a href="policies-loader.html">Terms of Service</a></li>
+                <li><a href="policies-loader.html">Privacy Policy</a></li>
+                <li><a href="policies-loader.html">Copyright Protection</a></li>
+                <li><a href="policies-loader.html">Disclaimers</a></li>
+                <li><a href="policies-loader.html">Accessibility Compliance Statement</a></li>
             </ul>
         </div>
         <div>
-            <h4><a href="contact.html">CONNECT WITH US</a></h4>
+            <h4><a href="contact-loader.html">CONNECT WITH US</a></h4>
             <div class="social-icons">
-                <a href="https://www.facebook.com"><img src="./Resources/facebook-icon.svg" alt="Facebook"></a>
-                <a href="https://www.twitter.com"><img src="./Resources/twitter-icon.svg" alt="X (formerly Twitter)"></a>
-                <a href="https://www.linkedin.com"><img src="./Resources/linkedin-icon.svg" alt="LinkedIn"></a>
+                <a href="https://www.facebook.com/profile.php?id=61553697504167"><img src="./Resources/facebook-icon.svg" alt="Facebook"></a>
+                <a href="https://www.linkedin.com/in/imaven-ai-85a4792ab/"><img src="./Resources/linkedin-icon.svg" alt="LinkedIn"></a>
+                <a href="https://x.com/imavenai"><img src="./Resources/twitter-icon.svg" alt="X (formerly Twitter)"></a>
+                <a href="https://www.instagram.com/imavenai/"><img src="./Resources/instagram.svg" alt="instagram"></a>
+                <a href="https://www.tiktok.com/@imavenai"><img src="./Resources/tiktok.svg" alt="TikTok"></a>
+                <a href="https://www.youtube.com/@ImavenAi"><img src="./Resources/youtube.svg" alt="YouTube"></a>
             </div>
         </div>
     </div>
@@ -283,47 +303,76 @@
     </div>
 
     <script>
-        const items = document.querySelectorAll('.carousel-item');
-        const hamburger = document.getElementById('hamburger');
-        const mobileNav = document.getElementById('mobile-nav');
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('DOM fully loaded and parsed');
 
-        let currentItem = 0;
+            const items = document.querySelectorAll('.carousel-item');
+            const hamburger = document.getElementById('hamburger');
+            const mobileNav = document.getElementById('mobile-nav');
+            const searchButton = document.getElementById('searchButton');
+            const searchInput = document.getElementById('searchInput');
 
-        document.getElementById('next').addEventListener('click', () => {
-            items[currentItem].classList.remove('active');
-            currentItem = (currentItem + 1) % items.length;
-            items[currentItem].classList.add('active');
-        });
-
-        document.getElementById('prev').addEventListener('click', () => {
-            items[currentItem].classList.remove('active');
-            currentItem = (currentItem - 1 + items.length) % items.length;
-            items[currentItem].classList.add('active');
-        });
-
-        hamburger.addEventListener('click', () => {
-            if (mobileNav.classList.contains('open')) {
-                mobileNav.classList.remove('open');
-                mobileNav.style.display = 'none';
-            } else {
-                mobileNav.classList.add('open');
-                mobileNav.style.display = 'flex';
+            if (!items || !hamburger || !mobileNav || !searchButton || !searchInput) {
+                console.error('One or more elements are missing:', {
+                    items,
+                    hamburger,
+                    mobileNav,
+                    searchButton,
+                    searchInput
+                });
+                return;
             }
-            hamburger.classList.toggle('open');
-        });
 
-        document.getElementById('searchButton').addEventListener('click', function () {
-            const query = document.getElementById('searchInput').value;
-            alert('Searching for: ' + query);
-            // Add your search functionality here
-        });
+            let currentItem = 0;
 
-        document.querySelectorAll('.category').forEach(category => {
-            category.addEventListener('click', function () {
-                const query = this.textContent;
-                document.getElementById('searchInput').value = query;
-                alert('Selected category: ' + query);
-                // Add your category search functionality here
+            const nextButton = document.getElementById('next');
+            if (nextButton) {
+                nextButton.addEventListener('click', () => {
+                    items[currentItem].classList.remove('active');
+                    currentItem = (currentItem + 1) % items.length;
+                    items[currentItem].classList.add('active');
+                });
+            } else {
+                console.warn('Next button not found');
+            }
+
+            const prevButton = document.getElementById('prev');
+            if (prevButton) {
+                prevButton.addEventListener('click', () => {
+                    items[currentItem].classList.remove('active');
+                    currentItem = (currentItem - 1 + items.length) % items.length;
+                    items[currentItem].classList.add('active');
+                });
+            } else {
+                console.warn('Previous button not found');
+            }
+
+            hamburger.addEventListener('click', () => {
+                if (mobileNav.classList.contains('open')) {
+                    mobileNav.classList.remove('open');
+                    mobileNav.style.display = 'none';
+                } else {
+                    mobileNav.classList.add('open');
+                    mobileNav.style.display = 'flex';
+                }
+                hamburger.classList.toggle('open');
+            });
+
+            searchButton.addEventListener('click', function () {
+                const query = searchInput.value;
+                console.log('Searching for:', query);
+                alert('Searching for: ' + query);
+                // Add your search functionality here
+            });
+
+            document.querySelectorAll('.category').forEach(category => {
+                category.addEventListener('click', function () {
+                    const query = this.textContent;
+                    searchInput.value = query;
+                    console.log('Selected category:', query);
+                    alert('Selected category: ' + query);
+                    // Add your category search functionality here
+                });
             });
         });
     </script>

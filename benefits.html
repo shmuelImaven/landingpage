@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMaven</title>
+    <title>iMaven</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Inria+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="./style.css" rel="stylesheet" />
-        
+    <link rel="stylesheet" type="text/css" href="http://localhost:3030/files/widget.css?api_key=api_key1">
+    <script src="http://localhost:3030/files/widget?api_key=api_key1"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
     <style>
         .footer h4 a, .header .nav-links a {
             color: inherit; /* Inherit the color from the parent element */
@@ -25,15 +27,29 @@
         .header .nav-links a {
             font-weight: bold; /* Make the header links bold */
         }
+                
+        .social-icons img {
+            transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1); /* Scale up the image slightly on hover */
+        }
+
 
         .content-section {
             margin: 40px auto; /* Center the section */
             max-width: 800px; /* Limit the width of the section */
             font-family: 'Inter', sans-serif;
             padding: 20px;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section h1 {
+            font-family: 'Inria Sans', sans-serif;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 20px;
+            text-align: left;
         }
 
         .content-section h2 {
@@ -76,10 +92,10 @@
             <div class="blue-logo"></div>
         </div>
         <div class="nav-links font-inria">
-            <div><a href="index.html">Home</a></div>
-            <div><a href="services.html">Services</a></div>
-            <div><a href="aboutus.html">About Us</a></div>
-            <div><a href="contact.html">Contact</a></div>
+            <div><a href="home-loader.html">Home</a></div>
+            <div><a href="services-loader.html">Services</a></div>
+            <div><a href="aboutus-loader.html">About Us</a></div>
+            <div><a href="contact-loader.html">Contact</a></div>
         </div>
         <div class="auth-links font-inter">
             <div>
@@ -111,8 +127,7 @@
         <div class="banner-content">
             <div style="width: 28vw;">
                 <span class="font-inria" style="font-size: 2.5rem;font-weight: 600;color: #FFFFFF;line-height: 1;">
-                    Start your journey with Imaven
-                </span>
+                    Start your journey with imaven
             </div>
             <div style="width: 34vw;margin-top: 1vh;">
                 <span class="font-inter" style="font-size: 1rem;color: #FFFFFF;font-weight: 400">
@@ -124,12 +139,12 @@
             <div class="search-container">
                 <div class="search-box">
                     <input type="text" id="searchInput" class="search-input font-inter"
-                        placeholder="Type your question here...">
-                    <div class="search-button" id="searchButton">
+                        placeholder="Expert matching feature coming soon!" disabled>
+                    <div class="search-button disabled" id="searchButton">
                         <img src="./Resources/search-img.svg" style="width: 2vw;height: 2vh;" />
                     </div>
                 </div>
-                <div class="category-container font-inter">
+                <div class="category-container font-inter disabled">
                     <div class="category">Financial Planning</div>
                     <div class="category">Health and Wellness</div>
                     <div class="category">Shopping</div>
@@ -142,85 +157,129 @@
 
     <!-- Content Section -->
     <div class="content-section">
+        <h1>Benefits for Advisers</h1>
+    
         <h2>Enhance Expertise</h2>
         <p>
-            iMaven equips advisers with advanced tools and analytics, enhancing their ability to deliver expert advice
-            based on the latest trends and data. This technological empowerment allows advisers to refine their
-            strategies and offer cutting-edge solutions that are tailored to their clients' specific needs.
+            iMaven revolutionizes advisory services by equipping professionals with state-of-the-art tools and AI-powered analytics. Our platform doesn't just provide data; it offers predictive insights and trend analyses that empower advisers to stay ahead of market shifts and client needs. With iMaven, you can:
         </p>
-
+        <ul>
+            <li>Access real-time data visualization tools for complex market trends</li>
+            <li>Utilize AI-driven predictive models to anticipate client needs and market changes</li>
+            <li>Leverage machine learning algorithms to personalize advice for each client</li>
+            <li>Collaborate with peers globally through our secure expert network, fostering knowledge exchange</li>
+        </ul>
+    
         <h2>Optimize Resource Allocation</h2>
         <p>
-            With iMaven, advisers can optimize their workflow and resource allocation, ensuring that their time and
-            efforts are directed toward high-value activities. The platform’s automation features handle the
-            administrative load, freeing up advisers to focus on strategic decision-making and client engagement.
+            Time is your most valuable asset, and iMaven ensures you make the most of it. Our intelligent workflow management system revolutionizes how you allocate your resources:
         </p>
-
+        <ul>
+            <li>AI-powered task prioritization to focus on high-impact activities</li>
+            <li>Automated client onboarding and data collection processes</li>
+            <li>Smart scheduling that optimizes your availability across time zones</li>
+            <li>Customizable automation for repetitive tasks, freeing you for strategic work</li>
+        </ul>
+    
         <h2>Boost Client Satisfaction</h2>
         <p>
-            iMaven's streamlined process not only saves time for advisers but also enhances the client experience.
-            Quick, accurate, and meaningful interactions increase client satisfaction and loyalty, translating into
-            higher retention rates and more referrals.
+            Happy clients are the cornerstone of a thriving advisory practice. iMaven enhances client satisfaction through:
         </p>
-
+        <ul>
+            <li>Instant, AI-generated preliminary insights for quick response to client queries</li>
+            <li>Interactive client portals for transparent, real-time updates on their portfolio or project status</li>
+            <li>Personalized content delivery based on individual client preferences and behavior</li>
+            <li>Seamless multi-channel communication options (video, chat, email) integrated into one platform</li>
+        </ul>
+    
         <h2>Promote Continuous Learning</h2>
         <p>
-            The iMaven platform provides continuous learning opportunities for advisers through access to a wealth of
-            educational materials and updates on the latest industry trends. This ongoing professional development helps
-            advisers stay at the forefront of their field, further enhancing their ability to provide top-tier advice.
+            Stay at the cutting edge of your field with iMaven's comprehensive learning ecosystem:
         </p>
-
+        <ul>
+            <li>AI-curated personalized learning paths based on your expertise and interests</li>
+            <li>Virtual reality training simulations for hands-on experience with complex scenarios</li>
+            <li>Access to exclusive webinars and masterclasses from industry leaders</li>
+            <li>Gamified learning modules to make professional development engaging and rewarding</li>
+        </ul>
+    
         <h2>Drive Innovation</h2>
         <p>
-            By reducing the burden of repetitive tasks and fostering a focus on core competencies, iMaven encourages
-            innovation within the advisory community. Advisers can experiment with new approaches and strategies,
-            pushing the boundaries of what's possible in their professions.
+            iMaven is not just a platform; it's an innovation incubator for the advisory community:
         </p>
+        <ul>
+            <li>Access to a sandbox environment to test new strategies and approaches safely</li>
+            <li>Collaboration tools for cross-disciplinary projects, fostering innovative solutions</li>
+            <li>AI-assisted brainstorming tools to help generate novel ideas and approaches</li>
+            <li>Regular innovation challenges with rewards for groundbreaking advisory methodologies</li>
+        </ul>
+    
+        <h2>Expand Your Reach</h2>
+        <p>
+            With iMaven, your expertise knows no bounds:
+        </p>
+        <ul>
+            <li>Global client matching algorithm to connect you with ideal clients worldwide</li>
+            <li>Multilingual AI translation for seamless communication across language barriers</li>
+            <li>Digital marketing tools and SEO optimization to enhance your online presence</li>
+            <li>Opportunities to contribute to iMaven's thought leadership content, boosting your industry profile</li>
+        </ul>
+    
+        <p>
+            Join iMaven today and transform your advisory practice. Harness the power of AI, data analytics, and global networking to elevate your expertise, optimize your workflow, and deliver unparalleled value to your clients. With iMaven, you're not just keeping pace with the future of advisory services – you're defining it.
+        </p>
+    
+        <div class="cta-container">
+            <a href="#get-started-adviser" class="cta-button">Start Your iMaven Journey Today</a>
+        </div>
     </div>
 
     <!-- footer -->
     <div class="footer font-inter">
         <div>
-            <h4><a href="index.html">NAVIGATE</a></h4>
+            <h4><a href="home-loader.html">NAVIGATE</a></h4>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="home-loader.html">Home</a></li>
+                <li><a href="services-loader.html">Services</a></li>
+                <li><a href="contact-loader.html">Contact Us</a></li>
             </ul>
         </div>
         <div>
-            <h4><a href="aboutus.html">COMPANY INFO</a></h4>
+            <h4><a href="aboutus-loader.html">COMPANY INFO</a></h4>
             <ul>
-                <li><a href="aboutus.html">About Imaven</a></li>
-                <li><a href="whyimaven.html">Why Imaven</a></li>
+                <li><a href="aboutus-loader.html">About Imaven</a></li>
+                <li><a href="whyimaven-loader.html">Why Imaven</a></li>
             </ul>
         </div>
         <div>
-            <h4><a href="help.html">RESOURCES</a></h4>
+            <h4><a href="help-loader.html">RESOURCES</a></h4>
             <ul>
-                <li><a href="help.html">Help & FAQ</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="help-loader.html">Help & FAQ</a></li>
+                <li><a href="sitemap-loader.html">Sitemap</a></li>
                 <li><a href="#">Cookies</a></li>
             </ul>
         </div>
         <div>
-            <h4><a href="policies.html">POLICIES</a></h4>
+            <h4><a href="policies-loader.html">POLICIES</a></h4>
             <ul>
-                <li><a href="policies.html">Trade Mark</a></li>
-                <li><a href="policies.html">Terms of Service</a></li>
-                <li><a href="policies.html">Privacy Policy</a></li>
-                <li><a href="policies.html">Copyright Protection</a></li>
-                <li><a href="policies.html">Disclaimers</a></li>
-                <li><a href="policies.html">Accessibility Compliance Statement</a></li>
+                <li><a href="policies-loader.html">Trade Mark</a></li>
+                <li><a href="policies-loader.html">Terms of Service</a></li>
+                <li><a href="policies-loader.html">Privacy Policy</a></li>
+                <li><a href="policies-loader.html">Copyright Protection</a></li>
+                <li><a href="policies-loader.html">Disclaimers</a></li>
+                <li><a href="policies-loader.html">Accessibility Compliance Statement</a></li>
             </ul>
         </div>
         <div>
-            <h4><a href="contact.html">CONNECT WITH US</a></h4>
+            <h4><a href="contact-loader.html">CONNECT WITH US</a></h4>
             <div class="social-icons">
-                <a href="https://www.facebook.com"><img src="./Resources/facebook-icon.svg" alt="Facebook"></a>
-                <a href="https://www.twitter.com"><img src="./Resources/twitter-icon.svg" alt="X (formerly Twitter)"></a>
-                <a href="https://www.linkedin.com"><img src="./Resources/linkedin-icon.svg" alt="LinkedIn"></a>
-            </div>
+                <a href="https://www.facebook.com/profile.php?id=61553697504167"><img src="./Resources/facebook-icon.svg" alt="Facebook"></a>
+                <a href="https://www.linkedin.com/in/imaven-ai-85a4792ab/"><img src="./Resources/linkedin-icon.svg" alt="LinkedIn"></a>
+                <a href="https://x.com/imavenai"><img src="./Resources/twitter-icon.svg" alt="X (formerly Twitter)"></a>
+                <a href="https://www.instagram.com/imavenai/"><img src="./Resources/instagram.svg" alt="instagram"></a>
+                <a href="https://www.tiktok.com/@imavenai"><img src="./Resources/tiktok.svg" alt="TikTok"></a>
+                <a href="https://www.youtube.com/@ImavenAi"><img src="./Resources/youtube.svg" alt="YouTube"></a>
+            </div>>
         </div>
     </div>
     <div class="footer" style="padding-top: 40px;">
@@ -241,47 +300,76 @@
     </div>
 
     <script>
-        const items = document.querySelectorAll('.carousel-item');
-        const hamburger = document.getElementById('hamburger');
-        const mobileNav = document.getElementById('mobile-nav');
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('DOM fully loaded and parsed');
 
-        let currentItem = 0;
+            const items = document.querySelectorAll('.carousel-item');
+            const hamburger = document.getElementById('hamburger');
+            const mobileNav = document.getElementById('mobile-nav');
+            const searchButton = document.getElementById('searchButton');
+            const searchInput = document.getElementById('searchInput');
 
-        document.getElementById('next').addEventListener('click', () => {
-            items[currentItem].classList.remove('active');
-            currentItem = (currentItem + 1) % items.length;
-            items[currentItem].classList.add('active');
-        });
-
-        document.getElementById('prev').addEventListener('click', () => {
-            items[currentItem].classList.remove('active');
-            currentItem = (currentItem - 1 + items.length) % items.length;
-            items[currentItem].classList.add('active');
-        });
-
-        hamburger.addEventListener('click', () => {
-            if (mobileNav.classList.contains('open')) {
-                mobileNav.classList.remove('open');
-                mobileNav.style.display = 'none';
-            } else {
-                mobileNav.classList.add('open');
-                mobileNav.style.display = 'flex';
+            if (!items || !hamburger || !mobileNav || !searchButton || !searchInput) {
+                console.error('One or more elements are missing:', {
+                    items,
+                    hamburger,
+                    mobileNav,
+                    searchButton,
+                    searchInput
+                });
+                return;
             }
-            hamburger.classList.toggle('open');
-        });
 
-        document.getElementById('searchButton').addEventListener('click', function () {
-            const query = document.getElementById('searchInput').value;
-            alert('Searching for: ' + query);
-            // Add your search functionality here
-        });
+            let currentItem = 0;
 
-        document.querySelectorAll('.category').forEach(category => {
-            category.addEventListener('click', function () {
-                const query = this.textContent;
-                document.getElementById('searchInput').value = query;
-                alert('Selected category: ' + query);
-                // Add your category search functionality here
+            const nextButton = document.getElementById('next');
+            if (nextButton) {
+                nextButton.addEventListener('click', () => {
+                    items[currentItem].classList.remove('active');
+                    currentItem = (currentItem + 1) % items.length;
+                    items[currentItem].classList.add('active');
+                });
+            } else {
+                console.warn('Next button not found');
+            }
+
+            const prevButton = document.getElementById('prev');
+            if (prevButton) {
+                prevButton.addEventListener('click', () => {
+                    items[currentItem].classList.remove('active');
+                    currentItem = (currentItem - 1 + items.length) % items.length;
+                    items[currentItem].classList.add('active');
+                });
+            } else {
+                console.warn('Previous button not found');
+            }
+
+            hamburger.addEventListener('click', () => {
+                if (mobileNav.classList.contains('open')) {
+                    mobileNav.classList.remove('open');
+                    mobileNav.style.display = 'none';
+                } else {
+                    mobileNav.classList.add('open');
+                    mobileNav.style.display = 'flex';
+                }
+                hamburger.classList.toggle('open');
+            });
+
+            searchButton.addEventListener('click', function () {
+                const query = searchInput.value;
+                console.log('Searching for:', query);
+                alert('Searching for: ' + query);
+                // Add your search functionality here
+            });
+
+            document.querySelectorAll('.category').forEach(category => {
+                category.addEventListener('click', function () {
+                    const query = this.textContent;
+                    searchInput.value = query;
+                    console.log('Selected category:', query);
+                    alert('Selected category: ' + query);
+                    // Add your category search functionality here
+                });
             });
         });
     </script>

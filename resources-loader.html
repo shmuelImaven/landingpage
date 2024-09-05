@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iMaven - Resources</title>
+    <script>
+        function loadPage() {
+            var iframe = document.getElementById('content-frame');
+            iframe.src = window.innerWidth >= 768 ? 'resources.html' : 'mobile-resources.html';
+        }
+
+        function checkScreenSize() {
+            loadPage();
+        }
+
+        // Initial load
+        window.onload = loadPage;
+
+        // Check on resize
+        window.addEventListener('resize', checkScreenSize);
+        // Listen for messages from iframe
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'navigate') {
+                console.log('Navigating to:', event.data.url);
+                window.location.href = event.data.url;
+            }
+        });        
+    </script>
+    <style>
+        body, html, iframe {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="content-frame" title="Content"></iframe>
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Inria+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://localhost:3030/files/widget.css?api_key=api_key1">
+    <script src="http://localhost:3030/files/widget?api_key=api_key1"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+    <title>iMaven - Expert Advice at Your Fingertips</title>
+    <link rel="stylesheet" href="styles_mobile.css">
+</head>
+
+<body>
+
+    <header class="header" style="display: flex; justify-content: space-between; align-items: center; background-color: #26547f; padding: 10px 20px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
+        <div class="logo-container" style="z-index: 1;">
+            <div class="blue-logo"></div>
+        </div>
+        <p id="imavenai-text" style="position: absolute; left: 50%; transform: translateX(-50%); margin: 0; font-size: 24px; color: #ffffff; font-weight: bold; font-family: Arial, sans-serif;">iMaven Ai</p>
+        <button class="hamburger" id="hamburger" style="z-index: 1;">
+            <span class="hamburger-lines"></span>
+            <span class="hamburger-lines"></span>
+            <span class="hamburger-lines"></span>
+        </button>
+    </header>
+    
+    <nav class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-header">
+            <div class="logo-container">
+                <div class="blue-logo"></div>
+            </div>
+            <button class="close-menu" id="close-menu">×</button>
+        </div>
+        <div class="mobile-nav-content">
+            <a href="home-loader.html"><i class="icon-home"></i>Home</a>
+            <a href="contact-loader.html"><i class="icon-contact"></i>Contact</a>
+            <a href="companyinfo-loader.html"><i class="icon-info"></i>Company info</a>
+            <a href="aboutus-loader.html"><i class="icon-about"></i>About Us</a>
+            <a href="benefits-loader.html"><i class="icon-benefits"></i>Benefits</a>
+            <a href="services-loader.html"><i class="icon-services"></i>Services</a>
+            <a href="whyimaven-loader.html"><i class="icon-choose"></i>Why iMaven</a>
+            <a href="policies-loader.html"><i class="icon-polices"></i>Polices</a>
+            <a href="insight-loader.html"><i class="icon-insight"></i>Insight</a>
+            <a href="flow-loader.html"><i class="icon-flow"></i>Flow</a>
+            <a href="help-loader.html"><i class="icon-help"></i>Help</a>
+        </div>
+    </nav>
+
+    <section class="banner" style="background-image: url('./Resources/background_new.jpg'); background-size: cover; background-position: center; color: #ffffff; ">
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Expert matching feature coming soon" disabled>
+            <button class="search-button" disabled>
+                <img src="./Resources/search-img.svg" alt="Search" width="20" height="20">
+            </button>
+        </div>
+    </section>
+
+    <section class="stats-container" style="background-color: #F8FBFF; padding: 20px;">
+        <h2>Our Impact</h2>
+        <div style="width: 100px; height: 2px; background-color: #00a3e0; margin: 0 auto 30px;"></div>
+        <div class="stats-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="stats-item" style="background-color: #F8FBFF; padding: 10px; text-align: center;">
+                <div class="icon-container" style="width: 60px; height: 60px; margin: 0 auto 10px;">
+                    <img src="./Resources/stats-img-1.svg" class="stats-icon" alt="Advisory Sessions" style="width: 100%; height: 100%;">
+                </div>
+                <p style="margin: 5px 0; font-size: 14px;">Advisory Sessions Completed</p>
+                <h3 style="margin: 5px 0; font-size: 24px; font-weight: bold;">300</h3>
+            </div>
+            <div class="stats-item" style="background-color: #F8FBFF; padding: 10px; text-align: center;">
+                <div class="icon-container" style="width: 60px; height: 60px; margin: 0 auto 10px;">
+                    <img src="./Resources/stats-img-2.svg" class="stats-icon" alt="Satisfied Users" style="width: 100%; height: 100%;">
+                </div>
+                <p style="margin: 5px 0; font-size: 14px;">Satisfied Users Worldwide</p>
+                <h3 style="margin: 5px 0; font-size: 24px; font-weight: bold;">400</h3>
+            </div>
+            <div class="stats-item" style="background-color: #F8FBFF; padding: 10px; text-align: center;">
+                <div class="icon-container" style="width: 60px; height: 60px; margin: 0 auto 10px;">
+                    <img src="./Resources/stats-img-3.svg" class="stats-icon" alt="Earnings" style="width: 100%; height: 100%;">
+                </div>
+                <p style="margin: 5px 0; font-size: 14px;">Earnings for Advisers</p>
+                <h3 style="margin: 5px 0; font-size: 24px; font-weight: bold;">50000</h3>
+            </div>
+            <div class="stats-item" style="background-color: #F8FBFF; padding: 10px; text-align: center;">
+                <div class="icon-container" style="width: 60px; height: 60px; margin: 0 auto 10px;">
+                    <img src="./Resources/stats-img-4.svg" class="stats-icon" alt="Satisfaction Rate" style="width: 100%; height: 100%;">
+                </div>
+                <p style="margin: 5px 0; font-size: 14px;">Customer Satisfaction Rate</p>
+                <h3 style="margin: 5px 0; font-size: 24px; font-weight: bold;">100%</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="steps-container" style="text-align: center; padding: 20px;">
+        <h2 style="margin-bottom: 30px;">How It Works</h2>
+        <div style="width: 100px; height: 2px; background-color: #00a3e0; margin: 0 auto 30px;"></div>
+        <div class="step-item" style="margin-bottom: 40px;">
+            <div class="icon-container" style="width: 100px; height: 100px; margin: 0 auto 20px; background-color: #ffffff; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
+                <img src="./Resources/steps-img-1.svg" class="stats-icon" alt="Initiate a Consultation" style="width: 105%; height: 105%;">
+            </div>
+            <h3 style="margin-bottom: 10px;">Initiate a Consultation</h3>
+            <p style="max-width: 300px; margin: 0 auto;">Launch your advisory journey by entering your question in the chat. Our AI will guide you through the process to refine your inquiry.</p>
+        </div>
+        <div class="step-item" style="margin-bottom: 40px;">
+            <div class="icon-container" style="width: 100px; height: 100px; margin: 0 auto 20px; background-color: #ffffff; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
+                <img src="./Resources/steps-img-2.svg" class="stats-icon" alt="Choose an Expert" style="width: 105%; height: 105%;">
+            </div>
+            <h3 style="margin-bottom: 10px;">Choose an Expert</h3>
+            <p style="max-width: 300px; margin: 0 auto;">Browse through our list of verified advisers or let our AI recommend the best match based on your detailed needs.</p>
+        </div>
+        <div class="step-item" style="margin-bottom: 40px;">
+            <div class="icon-container" style="width: 100px; height: 100px; margin: 0 auto 20px; background-color: #ffffff; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
+                <img src="./Resources/steps-img-3.svg" class="stats-icon" alt="Engage and Collaborate" style="width: 105%; height: 105%;">
+            </div>
+            <h3 style="margin-bottom: 10px;">Engage and Collaborate</h3>
+            <p style="max-width: 300px; margin: 0 auto;">Utilize interactive tools within your dedicated WorkRoom to communicate, share files, and collaborate with your chosen adviser.</p>
+        </div>
+        <div class="step-item" style="margin-bottom: 40px;">
+            <div class="icon-container" style="width: 100px; height: 100px; margin: 0 auto 20px; background-color: #ffffff; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
+                <img src="./Resources/steps-img-4.svg" class="stats-icon" alt="Secure Transactions" style="width: 105%; height: 105%;">
+            </div>
+            <h3 style="margin-bottom: 10px;">Secure Transactions</h3>
+            <p style="max-width: 300px; margin: 0 auto;">Complete the advisory session with secure payments. Choose your preferred payment method and benefit from our escrow protection to ensure satisfaction.</p>
+        </div>
+        <a href="services-loader.html" class="view-more" style="display: inline-block; background-color: #00a3e0; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 20px;">View more</a>
+    </section>
+
+    <section class="benefits-container" style="background-color: #e8f2ff; padding: 4vh 6vw;">
+        <h2>Benefits for Advisors</h2>
+        <div style="width: 100px; height: 2px; background-color: #00a3e0; margin: 0 auto 30px;"></div>
+        <div class="benefit-item">
+            <div class="icon-container" style="width: 100px; height: 100px; margin: 0 auto 20px; background-color: #e8f2ff; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
+                <img src="./Resources/benefits-img-1.svg" class="stats-icon" alt="Engage and Collaborate" style="width: 80%; height: 80%;">
+            </div>
+            <h3>Save Time</h3>
+            <p>Answer a question within seconds and with very little work.</p>
+        </div>
+        <div class="benefit-item">
+            <div class="icon-container" style="width: 100px; height: 100px; margin: 0 auto 20px; background-color: #e8f2ff; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
+                <img src="./Resources/benefits-img-2.svg" class="stats-icon" alt="Engage and Collaborate" style="width: 80%; height: 80%;">
+            </div>
+            <h3>Scale Up</h3>
+            <p>Be available to provide expert answers for a large set of answers.</p>
+        </div>
+        <div class="benefit-item">
+            <div class="icon-container" style="width: 100px; height: 100px; margin: 0 auto 20px; background-color: #e8f2ff; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
+                <img src="./Resources/benefits-img-3.svg" class="stats-icon" alt="Engage and Collaborate" style="width: 80%; height: 80%;">
+            </div>
+            <h3>Monetize Knowledge</h3>
+            <p>Turn accumulated knowledge and expertise into revenues.</p>
+        </div>
+        <a href="benefits-loader.html" class="view-more">View more</a>
+    </section>
+
+    <section class="why-choose-us" style="background-color: #0366a3; padding: 2vh 4vw;">
+        <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
+            <h2 class="font-inria" style="color: #FFFFFF; font-weight: 700; font-size: 2rem; margin-bottom: 10px;">
+                Why people choose us
+            </h2>
+            <div style="background-color: #B5E1FA; width: 100px; height: 2px;"></div>
+        </div>
+        
+        <div class="reasons-grid" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div class="reason-item" style="width: 48%; margin-bottom: 30px;">
+                <img src="./Resources/credibility-img.svg" alt="Credibility Icon" style="width: 50px; height: 50px; margin-bottom: 10px;">
+                <h3 class="font-inria" style="color: #FFFFFF; font-size: 1.2rem; margin-bottom: 10px;">Credibility</h3>
+                <p class="font-inria" style="color: #FFFFFF; font-size: 1rem;">We rigorously vet all advisers, showcasing their credentials and user reviews to ensure you connect with trusted professionals who have proven expertise.</p>
+            </div>
+            
+            <div class="reason-item" style="width: 48%; margin-bottom: 30px;">
+                <img src="./Resources/flexibility-img.svg" alt="Flexibility Icon" style="width: 50px; height: 50px; margin-bottom: 10px;">
+                <h3 class="font-inria" style="color: #FFFFFF; font-size: 1.2rem; margin-bottom: 10px;">Flexibility</h3>
+                <p class="font-inria" style="color: #FFFFFF; font-size: 1rem;">Imaven offers various consultation models and customizable advisory services to cater to your specific needs, ensuring you receive the guidance you desire in the way that suits you best.</p>
+            </div>
+            
+            <div class="reason-item" style="width: 48%; margin-bottom: 30px;">
+                <img src="./Resources/security-img.svg" alt="Security Icon" style="width: 50px; height: 50px; margin-bottom: 10px;">
+                <h3 class="font-inria" style="color: #FFFFFF; font-size: 1.2rem; margin-bottom: 10px;">Security</h3>
+                <p class="font-inria" style="color: #FFFFFF; font-size: 1rem;">Your transactions are safeguarded with our secure escrow system, giving you peace of mind knowing your financial interactions are protected.</p>
+            </div>
+            
+            <div class="reason-item" style="width: 48%; margin-bottom: 30px;">
+                <img src="./Resources/value-img.svg" alt="Value Icon" style="width: 50px; height: 50px; margin-bottom: 10px;">
+                <h3 class="font-inria" style="color: #FFFFFF; font-size: 1.2rem; margin-bottom: 10px;">Value</h3>
+                <p class="font-inria" style="color: #FFFFFF; font-size: 1rem;">Imaven provides exceptional advisory services at competitive rates, ensuring you get outstanding value without compromising on quality.</p>
+            </div>
+            
+            <div class="reason-item" style="width: 48%; margin-bottom: 30px;">
+                <img src="./Resources/support-img.svg" alt="Support Icon" style="width: 50px; height: 50px; margin-bottom: 10px;">
+                <h3 class="font-inria" style="color: #FFFFFF; font-size: 1.2rem; margin-bottom: 10px;">Support</h3>
+                <p class="font-inria" style="color: #FFFFFF; font-size: 1rem;">Our customer care team is available around the clock to assist you with any inquiries, ensuring seamless experiences anytime, anywhere.</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="chooseus-loader.html" class="view-more font-inter" style="display: inline-block; background-color: #00a3e0; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">View more</a>
+        </div>
+    </section>
+    
+    <section class="testimonial-container" style="text-align: center; padding: 40px 20px; max-width: 800px; margin: 0 auto;">
+        <h2 style="font-size: 2rem; color: #212121; margin-bottom: 10px;">Feedback from our users</h2>
+        <div style="width: 100px; height: 2px; background-color: #00a3e0; margin: 0 auto 30px;"></div>
+        
+        <div style="position: relative; padding: 0 40px;">
+            <div class="carousel-container">
+                <div class="carousel-item active" style="text-align: center;">
+                    <p style="font-size: 1rem; color: #555; line-height: 1.6; margin-bottom: 20px;">
+                        Joining Imaven has transformed how I offer my services. The platform's user-friendly interface 
+                        allows me to connect with clients quickly, making it possible to provide rapid responses and efficient 
+                        advice. It's truly streamlined my workflow and increased client satisfaction.
+                    </p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="./Resources/jameson_grant.jpg" alt="Jameson Grant" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
+                        <div style="text-align: left;">
+                            <p style="font-weight: bold; margin: 0;">Jameson Grant</p>
+                            <p style="color: #00a3e0; margin: 0;">Financial Advisor</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-item" style="text-align: center; display: none;">
+                    <p style="font-size: 1rem; color: #555; line-height: 1.6; margin-bottom: 20px;">
+                        Imaven has been a game-changer for managing my coaching sessions. The tools are intuitive and the AI assists wonderfully in organizing my schedule. I can focus more on providing quality advice rather than on administrative tasks. Highly recommended for professionals looking to expand their reach.
+                    </p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="./Resources/Lily_Chen.jpg" alt="Lily Chen" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
+                        <div style="text-align: left;">
+                            <p style="font-weight: bold; margin: 0;">Lily Chen</p>
+                            <p style="color: #00a3e0; margin: 0;">Health and Wellness Coach</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="carousel-item" style="text-align: center; display: none;">
+                    <p style="font-size: 1rem; color: #555; line-height: 1.6; margin-bottom: 20px;">
+                        The ease of use and the speed with which I can connect with clients on Imaven is unmatched. The platform's design is top-notch, facilitating a smooth advisory process. This is how modern consultancy should be – quick, secure, and effective.
+                    </p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="./Resources/Marco_ischer.jpg" alt="Marco Fischer" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
+                        <div style="text-align: left;">
+                            <p style="font-weight: bold; margin: 0;">Marco Fischer</p>
+                            <p style="color: #00a3e0; margin: 0;">Business Strategist</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="carousel-item" style="text-align: center; display: none;">
+                    <p style="font-size: 1rem; color: #555; line-height: 1.6; margin-bottom: 20px;">
+                        I've used several platforms before, but Imaven stands out for its swift matchmaking and superb organizational tools. It allows me to provide personalized advice efficiently, enhancing my interaction with each client. Definitely a boost for my career coaching services.
+                    </p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="./Resources/Sophia_Rodriguez.jpg" alt="Sophia Rodriguez" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
+                        <div style="text-align: left;">
+                            <p style="font-weight: bold; margin: 0;">Sophia Rodriguez</p>
+                            <p style="color: #00a3e0; margin: 0;">Career Coach</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="carousel-item" style="text-align: center; display: none;">
+                    <p style="font-size: 1rem; color: #555; line-height: 1.6; margin-bottom: 20px;">
+                        Imaven provides all the tools I need to operate efficiently and help my clients make informed decisions quickly. The platform's integration of AI makes it easy to manage multiple clients, maintaining a high standard of personalized advice.
+                    </p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="./Resources/Arjun_Agate.jpg" alt="Arjun Agate" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
+                        <div style="text-align: left;">
+                            <p style="font-weight: bold; margin: 0;">Arjun Agate</p>
+                            <p style="color: #00a3e0; margin: 0;">Shopping Advisor</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="carousel-item" style="text-align: center; display: none;">
+                    <p style="font-size: 1rem; color: #555; line-height: 1.6; margin-bottom: 20px;">
+                        The guidance I received from my financial advisor on Imaven was incredibly fast and precisely what I needed to steer my startup in the right direction. Signing up was easy, and the advisor was not only knowledgeable but also very responsive.
+                    </p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="./Resources/Rachel_Kim.jpg" alt="Rachel Kim" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
+                        <div style="text-align: left;">
+                            <p style="font-weight: bold; margin: 0;">Rachel Kim</p>
+                            <p style="color: #00a3e0; margin: 0;">Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="carousel-item" style="text-align: center; display: none;">
+                    <p style="font-size: 1rem; color: #555; line-height: 1.6; margin-bottom: 20px;">
+                        I was amazed at how quickly I was able to connect with a life coach who really understands my challenges. Imaven made it easy to start the conversation, and my coach has been instrumental in helping me achieve my goals efficiently.
+                    </p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="./Resources/Michael_Andrews.jpg" alt="Michael Andrews" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
+                        <div style="text-align: left;">
+                            <p style="font-weight: bold; margin: 0;">Michael Andrews</p>
+                            <p style="color: #00a3e0; margin: 0;">Personal Development Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="carousel-item" style="text-align: center; display: none;">
+                    <p style="font-size: 1rem; color: #555; line-height: 1.6; margin-bottom: 20px;">
+                        Finding a shopping advisor who understands my taste and budget on Imaven was effortless. The platform is user-friendly, and I received excellent advice that helped me make smart purchases quickly. A fantastic service that I highly recommend!
+                    </p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="./Resources/Anna_Petrova.jpg" alt="Anna Petrova" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
+                        <div style="text-align: left;">
+                            <p style="font-weight: bold; margin: 0;">Anna Petrova</p>
+                            <p style="color: #00a3e0; margin: 0;">Online Shopper</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="carousel-item" style="text-align: center; display: none;">
+                    <p style="font-size: 1rem; color: #555; line-height: 1.6; margin-bottom: 20px;">
+                        The speed at which I found a wellness coach ready to help me on Imaven was astounding. The platform is straightforward to navigate, and the interaction with my coach was smooth and productive. It's been an empowering experience.
+                    </p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="./Resources/Tom_Richardson.jpg" alt="Tom Richardson" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
+                        <div style="text-align: left;">
+                            <p style="font-weight: bold; margin: 0;">Tom Richardson</p>
+                            <p style="color: #00a3e0; margin: 0;">Health Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="carousel-item" style="text-align: center; display: none;">
+                    <p style="font-size: 1rem; color: #555; line-height: 1.6; margin-bottom: 20px;">
+                        I needed quick advice on home decor and stumbled upon Imaven. The process was incredibly simple from start to finish, and I got fantastic, personalized advice from an expert in no time. The platform's efficiency is truly commendable.
+                    </p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="./Resources/Samantha_Lee.jpg" alt="Samantha Lee" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
+                        <div style="text-align: left;">
+                            <p style="font-weight: bold; margin: 0;">Samantha Lee</p>
+                            <p style="color: #00a3e0; margin: 0;">Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="prev" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer;">
+                <img src="./Resources/arrow-left.svg" alt="Previous" style="width: 30px; height: 30px;">
+            </button>
+            <button id="next" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer;">
+                <img src="./Resources/arrow-right.svg" alt="Next" style="width: 30px; height: 30px;">
+            </button>
+        </div>
+    </section>
+
+    <section class="insights-container" style="background-color: #F8FBFF; max-width: 800px; margin: 0 auto; padding: 20px;">
+        <h2 style="text-align: center; font-size: 24px; margin-bottom: 10px;">Imaven Insight</h2>
+        <div style="width: 100px; height: 2px; background-color: #00a3e0; margin: 0 auto 30px;"></div>
+        
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div class="insight-item" style="width: 48%; margin-bottom: 30px;">
+                <img src="./Resources/trend_analize.png" alt="Market Trends and Analysis" style="width: 100%; height: auto; margin-bottom: 10px;">
+                <h3 style="font-size: 18px; margin: 10px 0;">Market Trends and Analysis</h3>
+                <p style="color: #666; font-size: 14px;">December, 2024</p>
+            </div>
+            
+            <div class="insight-item" style="width: 48%; margin-bottom: 30px;">
+                <img src="./Resources/bestpractice.png" alt="Advisory Best Practices" style="width: 100%; height: auto; margin-bottom: 10px;">
+                <h3 style="font-size: 18px; margin: 10px 0;">Advisory Best Practices</h3>
+                <p style="color: #666; font-size: 14px;">May, 2024</p>
+            </div>
+            
+            <div class="insight-item" style="width: 48%; margin-bottom: 30px;">
+                <img src="./Resources/education.png" alt="Educational Resources" style="width: 100%; height: auto; margin-bottom: 10px;">
+                <h3 style="font-size: 18px; margin: 10px 0;">Educational Resources</h3>
+                <p style="color: #666; font-size: 14px;">May, 2024</p>
+            </div>
+            
+            <div class="insight-item" style="width: 48%; margin-bottom: 30px;">
+                <img src="./Resources/aienhancment.png" alt="AI Enhancements and Updates" style="width: 100%; height: auto; margin-bottom: 10px;">
+                <h3 style="font-size: 18px; margin: 10px 0;">AI Enhancements and Updates</h3>
+                <p style="color: #666; font-size: 14px;">June, 2024</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="insight-loader.html" class="view-more" style="display: inline-block; background-color: #00a3e0; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">View more</a>
+        </div>
+    </section>
+
+    <footer class="footer" style="background-color: #010207; color: #ffffff; padding: 20px; font-family: Arial, sans-serif;">
+        <div class="footer-section">
+            <h4 style="color: #ffffff; font-size: 14px; margin-bottom: 5px;">NAVIGATE</h4>
+            <p style="margin: 5px 0;"><a href="home-loader.html" style="color: #ffffff; text-decoration: none;">Home</a></p>
+            <p style="margin: 5px 0;"><a href="services-loader.html" style="color: #ffffff; text-decoration: none;">Services</a></p>
+            <p style="margin: 5px 0;"><a href="contact-loader.html" style="color: #ffffff; text-decoration: none;">Contact Us</a></p>
+        </div>
+        <div class="footer-section">
+            <h4 style="color: #ffffff; font-size: 14px; margin-bottom: 5px;">COMPANY INFO</h4>
+            <p style="margin: 5px 0;"><a href="aboutus-loader.html" style="color: #ffffff; text-decoration: none;">About Imaven</a></p>
+            <p style="margin: 5px 0;"><a href="whyimaven-loader.html" style="color: #ffffff; text-decoration: none;">Why Imaven</a></p>
+        </div>
+        <div class="footer-section">
+            <h4 style="color: #ffffff; font-size: 14px; margin-bottom: 5px;">RESOURCES</h4>
+            <p style="margin: 5px 0;"><a href="help-loader.html" style="color: #ffffff; text-decoration: none;">Help & FAQ</a></p>
+            <p style="margin: 5px 0;"><a href="sitemap-loader.html" style="color: #ffffff; text-decoration: none;">Sitemap</a></p>
+            <p style="margin: 5px 0;"><a href="#" style="color: #ffffff; text-decoration: none;">Cookies</a></p>
+        </div>
+        <div class="footer-section">
+            <h4 style="color: #ffffff; font-size: 14px; margin-bottom: 5px;">POLICIES</h4>
+            <p style="margin: 5px 0;"><a href="policies-loader.html" style="color: #ffffff; text-decoration: none; font-size: 16px;">Trade Mark</a></p>
+            <p style="margin: 5px 0;"><a href="policies-loader.html" style="color: #ffffff; text-decoration: none; font-size: 16px">Terms of Service</a></p>
+            <p style="margin: 5px 0;"><a href="policies-loader.html" style="color: #ffffff; text-decoration: none; font-size: 16px">Privacy Policy</a></p>
+            <p style="margin: 5px 0;"><a href="policies-loader.html" style="color: #ffffff; text-decoration: none; font-size: 16px">Copyright Protection</a></p>
+            <p style="margin: 5px 0;"><a href="policies-loader.html" style="color: #ffffff; text-decoration: none; font-size: 16px">Disclaimers</a></p>
+            <p style="margin: 5px 0;"><a href="policies-loader.html" style="color: #ffffff; text-decoration: none; font-size: 16px">Accessibility</a></p>
+        </div>
+        <div class="footer-section" style="text-align: center;">
+            <div class="social-icons" style="display: inline-flex; gap: 5px; justify-content: center;">
+                <a href="https://www.facebook.com/profile.php?id=61553697504167" target="_blank"><img src="./Resources/facebook-icon.svg" alt="Facebook" style="width: 24px; height: 24px;"></a>
+                <a href="https://www.linkedin.com/in/imaven-ai-85a4792ab/" target="_blank"><img src="./Resources/linkedin-icon.svg" alt="LinkedIn" style="width: 24px; height: 24px;"></a>
+                <a href="https://x.com/imavenai" target="_blank"><img src="./Resources/twitter-icon.svg" alt="Twitter" style="width: 24px; height: 24px;"></a>
+                <a href="https://www.instagram.com/imavenai/" target="_blank"><img src="./Resources/instagram.svg" alt="Instagram" style="width: 24px; height: 24px;"></a>
+                <a href="https://www.tiktok.com/@imavenai" target="_blank"><img src="./Resources/tiktok.svg" alt="TikTok" style="width: 24px; height: 24px;"></a>
+                <a href="https://www.youtube.com/@ImavenAi" target="_blank"><img src="./Resources/youtube.svg" alt="YouTube" style="width: 24px; height: 24px;"></a>
+            </div>
+        </div>
+        <div class="slogan" style="color: #ffffff; text-align: center; padding: 0px 0; font-family: Arial, sans-serif; font-size: 14px">
+            <p style="margin: 5px 0;">iMaven Accelerating answers, amplifying expertise</p>
+        </div>
+        <div class="copyright" style="color: #ffffff; text-align: center; padding: 0px 0; font-family: Arial, sans-serif; font-size: 12px">
+            <p style="margin: 5px 0;">Copyright © 2024, imavenai.com</p>
+        </div>
+    </footer>
+    <script src="carousel.js"></script>
+    <script src="Humburger.js"></script>
+    <script>
+        // Function to move the text
+        function moveText(pixels) {
+            const text = document.getElementById('imavenai-text');
+            text.style.left = pixels - 'px';
+        }
+
+        // Example usage:
+        // moveText(10);  // Move 10 pixels to the right
+        // moveText(-10); // Move 10 pixels to the left
+    </script>
+</body>
+</html>
