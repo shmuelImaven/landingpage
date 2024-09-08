@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iMaven Home</title>
     <script>
+        let iframe;
+
         function loadPage() {
-            var iframe = document.getElementById('content-frame');
+            iframe = document.getElementById('content-frame');
             iframe.src = window.innerWidth >= 768 ? 'home.html' : 'mobile-home.html';
         }
 
@@ -17,24 +19,32 @@
         // Initial load
         window.onload = loadPage;
 
-        // Check on resize
+        // Add event listener for resize to change iframe source
         window.addEventListener('resize', checkScreenSize);
 
-        // Disable resize event during input focus
-        const originalResizeFunction = checkScreenSize;
-        const chatInput = document.getElementById('searchInput'); // Update with your input's actual ID
+        // Function to handle resize disabling during input focus
+        function disableResizeOnFocus() {
+            const inputs = document.querySelectorAll('input, textarea');
 
-        if (chatInput) {
-            chatInput.addEventListener('focus', () => {
-                window.removeEventListener('resize', originalResizeFunction);
-            });
+            inputs.forEach(input => {
+                input.addEventListener('focus', () => {
+                    // Temporarily remove resize event listener when any input is focused
+                    window.removeEventListener('resize', checkScreenSize);
+                });
 
-            chatInput.addEventListener('blur', () => {
-                window.addEventListener('resize', originalResizeFunction);
+                input.addEventListener('blur', () => {
+                    // Re-add resize event listener when input loses focus
+                    window.addEventListener('resize', checkScreenSize);
+                });
             });
         }
 
-        // Listen for messages from iframe
+        // Call disableResizeOnFocus once iframe has loaded
+        window.addEventListener('load', () => {
+            disableResizeOnFocus();
+        });
+
+        // Listen for messages from iframe to handle internal navigation
         window.addEventListener('message', function(event) {
             if (event.data.type === 'navigate') {
                 console.log('Navigating to:', event.data.url);
