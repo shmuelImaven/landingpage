@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>iMaven Home</title>
     <script>
-        let initialScreenWidth = window.innerWidth;
+        let currentOrientation = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
 
         function loadPage() {
             var iframe = document.getElementById('content-frame');
-            iframe.src = initialScreenWidth >= 768 ? 'home.html' : 'mobile-home.html';
+            iframe.src = window.innerWidth >= 768 ? 'home.html' : 'mobile-home.html';
         }
 
-        function checkScreenSize() {
-            // Only reload if the width changes significantly (e.g., rotation)
-            if (Math.abs(window.innerWidth - initialScreenWidth) > 100) {
-                initialScreenWidth = window.innerWidth;
+        function checkOrientation() {
+            let newOrientation = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
+            if (newOrientation !== currentOrientation) {
+                currentOrientation = newOrientation;
                 loadPage();
             }
         }
@@ -23,11 +23,9 @@
         // Initial load
         window.onload = loadPage;
 
-        // Check on resize, but use a debounce function
-        let resizeTimer;
-        window.addEventListener('resize', function() {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(checkScreenSize, 250);
+        // Check on orientation change
+        window.addEventListener('orientationchange', function() {
+            setTimeout(checkOrientation, 100);  // Small delay to ensure dimensions have updated
         });
 
         // Listen for messages from iframe
