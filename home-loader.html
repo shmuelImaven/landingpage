@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>iMaven Home</title>
     <script>
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
+                || (window.innerWidth <= 800 && window.innerHeight <= 600);
+        }
+
         function loadContent() {
             const contentDiv = document.getElementById('content');
-            const url = window.innerWidth >= 768 ? 'home.html' : 'mobile-home.html';
+            const url = isMobile() ? 'mobile-home.html' : 'home.html';
 
             fetch(url)
                 .then(response => response.text())
@@ -27,7 +32,7 @@
         // Load content when the DOM is fully loaded
         document.addEventListener('DOMContentLoaded', loadContent);
 
-        // Navigation function (to replace the previous postMessage approach)
+        // Navigation function
         function navigate(url) {
             console.log('Navigating to:', url);
             window.location.href = url;
