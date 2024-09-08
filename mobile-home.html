@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Inria+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget.css?api_key=api_key1">
+    <script src="https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget?api_key=api_key1"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
     <title>iMaven - Expert Advice at Your Fingertips</title>
     <link rel="stylesheet" href="styles_mobile.css">
@@ -433,25 +435,6 @@
         // Example usage:
         // moveText(10);  // Move 10 pixels to the right
         // moveText(-10); // Move 10 pixels to the left
-    </script>
-    <!-- Dynamically Load Chatbot -->
-    <script>
-        function loadChatbotWidget() {
-            // Load the CSS for the chatbot widget
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = 'https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget.css?api_key=api_key1';
-            document.head.appendChild(link);
-
-            // Load the script for the chatbot widget
-            const script = document.createElement('script');
-            script.src = 'https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget?api_key=api_key1';
-            script.async = true;
-            document.body.appendChild(script);
-        }
-        // Load the widget after the page is fully loaded
-        window.addEventListener('load', loadChatbotWidget);
     </script>
 </body>
 </html>
