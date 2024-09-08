@@ -434,5 +434,25 @@
         // moveText(10);  // Move 10 pixels to the right
         // moveText(-10); // Move 10 pixels to the left
     </script>
+    <!-- Dynamically Load Chatbot -->
+<script>
+    function loadChatbotWidget() {
+        // Load the CSS for the chatbot widget
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget.css?api_key=api_key1';
+        document.head.appendChild(link);
+
+        // Load the script for the chatbot widget
+        const script = document.createElement('script');
+        script.src = 'https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget?api_key=api_key1';
+        script.async = true;
+        document.body.appendChild(script);
+    }
+
+    // Load the widget after the page is fully loaded
+    window.addEventListener('load', loadChatbotWidget);
+</script>
 </body>
 </html>
