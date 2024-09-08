@@ -7,8 +7,60 @@
     <title>iMaven Mobile</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Inria+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="./styles_mobile.css" rel="stylesheet" />
-</head>
+    <style>
+        /* Similar styling adjustments for mobile view */
+        .chatbot-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            color: #ffffff;
+            border-radius: 50%;
+            padding: 15px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            animation: pulse 1.5s infinite;
+        }
 
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .chatbot-button:hover {
+            animation: none;
+            transform: scale(1.1);
+        }
+
+        .chatbot-button img {
+            width: 75px;
+            height: 75px;
+        }
+
+        .chatbot-container {
+            position: fixed;
+            bottom: 70px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+
+        .chatbot-container .content {
+            padding: 20px;
+        }
+    </style>
+</head>
 <body>
 
     <header class="header" style="display: flex; justify-content: space-between; align-items: center; background-color: #26547f; padding: 10px 20px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
@@ -423,36 +475,25 @@
     </footer>
     <script src="carousel.js"></script>
     <script src="Humburger.js"></script>
+    <!-- Dynamically Load Chatbot -->
     <script>
-        // Function to move the text
-        function moveText(pixels) {
-            const text = document.getElementById('imavenai-text');
-            text.style.left = pixels - 'px';
+        function loadChatbotWidget() {
+            // Load the CSS for the chatbot widget
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget.css?api_key=api_key1';
+            document.head.appendChild(link);
+
+            // Load the script for the chatbot widget
+            const script = document.createElement('script');
+            script.src = 'https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget?api_key=api_key1';
+            script.async = true;
+            document.body.appendChild(script);
         }
 
-        // Example usage:
-        // moveText(10);  // Move 10 pixels to the right
-        // moveText(-10); // Move 10 pixels to the left
+        // Load the widget after the page is fully loaded
+        window.addEventListener('load', loadChatbotWidget);
     </script>
-        <!-- Dynamically Load Chatbot -->
-        <script>
-            function loadChatbotWidget() {
-                // Load the CSS for the chatbot widget
-                const link = document.createElement('link');
-                link.rel = 'stylesheet';
-                link.type = 'text/css';
-                link.href = 'https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget.css?api_key=api_key1';
-                document.head.appendChild(link);
-    
-                // Load the script for the chatbot widget
-                const script = document.createElement('script');
-                script.src = 'https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget?api_key=api_key1';
-                script.async = true;
-                document.body.appendChild(script);
-            }
-    
-            // Load the widget after the page is fully loaded
-            window.addEventListener('load', loadChatbotWidget);
-        </script>
 </body>
 </html>
