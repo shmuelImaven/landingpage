@@ -25,34 +25,18 @@
                         newScript.appendChild(document.createTextNode(oldScript.innerHTML));
                         oldScript.parentNode.replaceChild(newScript, oldScript);
                     });
-                    // Add event listeners to prevent refresh on input focus
-                    preventRefreshOnInputFocus();
                 })
                 .catch(error => console.error('Error loading content:', error));
         }
 
-        function preventRefreshOnInputFocus() {
-            const inputs = document.querySelectorAll('input, textarea');
-            inputs.forEach(input => {
-                input.addEventListener('focus', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                });
-                input.addEventListener('blur', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                });
-            });
-        }
-
-        // Prevent refresh on resize (which can be triggered by keyboard)
-        window.addEventListener('resize', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-        }, { passive: false });
-
         // Load content when the DOM is fully loaded
         document.addEventListener('DOMContentLoaded', loadContent);
+
+        // Navigation function
+        function navigate(url) {
+            console.log('Navigating to:', url);
+            window.location.href = url;
+        }
     </script>
     <style>
         body, html, #content {
@@ -60,11 +44,7 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow-x: hidden;
-            -webkit-overflow-scrolling: touch;
-        }
-        input, textarea {
-            font-size: 16px; /* Prevents zoom on focus in iOS */
+            overflow: hidden;
         }
     </style>
 </head>
