@@ -2,20 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>iMaven Home</title>
     <script>
+        let initialScreenWidth = window.innerWidth;
+
         function loadPage() {
             var iframe = document.getElementById('content-frame');
-            iframe.src = window.innerWidth >= 768 ? 'home.html' : 'mobile-home.html';
+            iframe.src = initialScreenWidth >= 768 ? 'home.html' : 'mobile-home.html';
         }
+
         function checkScreenSize() {
-            loadPage();
+            // Only reload if the width changes significantly (e.g., rotation)
+            if (Math.abs(window.innerWidth - initialScreenWidth) > 100) {
+                initialScreenWidth = window.innerWidth;
+                loadPage();
+            }
         }
+
         // Initial load
         window.onload = loadPage;
-        // Check on resize
-        window.addEventListener('resize', checkScreenSize);
+
+        // Check on resize, but use a debounce function
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(checkScreenSize, 250);
+        });
 
         // Listen for messages from iframe
         window.addEventListener('message', function(event) {
