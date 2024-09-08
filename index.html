@@ -2,53 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iMaven Home</title>
     <script>
-        function isMobile() {
-            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
-                || (window.innerWidth <= 800 && window.innerHeight <= 600);
+        function loadPage() {
+            var iframe = document.getElementById('content-frame');
+            iframe.src = window.innerWidth >= 768 ? 'home.html' : 'mobile-home.html';
         }
-
-        function loadContent() {
-            const contentDiv = document.getElementById('content');
-            const url = isMobile() ? 'mobile-home.html' : 'home.html';
-
-            fetch(url)
-                .then(response => response.text())
-                .then(html => {
-                    contentDiv.innerHTML = html;
-                    // Execute any scripts in the loaded content
-                    Array.from(contentDiv.getElementsByTagName('script')).forEach(oldScript => {
-                        const newScript = document.createElement('script');
-                        Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
-                        newScript.appendChild(document.createTextNode(oldScript.innerHTML));
-                        oldScript.parentNode.replaceChild(newScript, oldScript);
-                    });
-                })
-                .catch(error => console.error('Error loading content:', error));
+        function checkScreenSize() {
+            loadPage();
         }
+        // Initial load
+        window.onload = loadPage;
+        // Check on resize
+        window.addEventListener('resize', checkScreenSize);
 
-        // Load content when the DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', loadContent);
-
-        // Navigation function
-        function navigate(url) {
-            console.log('Navigating to:', url);
-            window.location.href = url;
-        }
+        // Listen for messages from iframe
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'navigate') {
+                console.log('Navigating to:', event.data.url);
+                window.location.href = event.data.url;
+            }
+        });
     </script>
     <style>
-        body, html, #content {
+        body, html, iframe {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
+            border: none;
             overflow: hidden;
         }
     </style>
 </head>
 <body>
-    <div id="content"></div>
+    <iframe id="content-frame" title="Content"></iframe>
 </body>
 </html>
