@@ -5,34 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>iMaven Home</title>
     <script>
-        function loadPage() {
-            var iframe = document.getElementById('content-frame');
-            iframe.src = window.innerWidth >= 768 ? 'home.html' : 'mobile-home.html';
+        function loadContent() {
+            const contentDiv = document.getElementById('content');
+            const url = window.innerWidth >= 768 ? 'home.html' : 'mobile-home.html';
+
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    contentDiv.innerHTML = html;
+                    // Execute any scripts in the loaded content
+                    Array.from(contentDiv.getElementsByTagName('script')).forEach(oldScript => {
+                        const newScript = document.createElement('script');
+                        Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                        newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                        oldScript.parentNode.replaceChild(newScript, oldScript);
+                    });
+                })
+                .catch(error => console.error('Error loading content:', error));
         }
 
-        // Load page only once when the DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', loadPage);
+        // Load content when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', loadContent);
 
-        // Listen for messages from iframe
-        window.addEventListener('message', function(event) {
-            if (event.data.type === 'navigate') {
-                console.log('Navigating to:', event.data.url);
-                window.location.href = event.data.url;
-            }
-        });
+        // Navigation function (to replace the previous postMessage approach)
+        function navigate(url) {
+            console.log('Navigating to:', url);
+            window.location.href = url;
+        }
     </script>
     <style>
-        body, html, iframe {
+        body, html, #content {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-            border: none;
             overflow: hidden;
         }
     </style>
 </head>
 <body>
-    <iframe id="content-frame" title="Content"></iframe>
+    <div id="content"></div>
 </body>
 </html>
