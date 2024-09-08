@@ -7,6 +7,93 @@
     <title>iMaven</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Inria+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="./style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget.css?api_key=api_key1">
+    <script src="https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget?api_key=api_key1"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+    <style>
+        .footer h4 a, .header .nav-links a {
+            color: inherit; /* Inherit the color from the parent element */
+            text-decoration: none; /* Remove the underline */
+        }
+
+        .footer h4 a:visited, .header .nav-links a:visited {
+            color: inherit; /* Keep the original color for visited links */
+        }
+
+        .footer h4 a:hover, .header .nav-links a:hover {
+            color: #2773d6; /* Change to your desired hover color */
+        }
+                
+        .header .nav-links a {
+            font-weight: bold; /* Make the header links bold */
+        }
+
+        .benefits-image {
+            border-radius: 15px; /* Add rounded corners to the benefits image */
+        }
+        
+        .social-icons img {
+            transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1); /* Scale up the image slightly on hover */
+        }
+
+        /* Chatbot Button Styling */
+        .chatbot-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            color: #ffffff;
+            border-radius: 50%;
+            padding: 15px;
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
+            animation: pulse 1.5s infinite; /* Apply the pulse animation */
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .chatbot-button:hover {
+            animation: none; /* Stop the animation on hover */
+            transform: scale(1.1); /* Scale up the button slightly on hover */
+        }
+
+        .chatbot-button img {
+            width: 75px;
+            height: 75px;
+        }
+
+        /* Chatbot Container Styling */
+        .chatbot-container {
+            position: fixed;
+            bottom: 70px; /* Adjust as needed */
+            right: 20px;
+            width: 300px; /* Adjust as needed */
+            height: 400px; /* Adjust as needed */
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none; /* Hidden by default */
+        }
+
+        /* Add padding for the chatbot content */
+        .chatbot-container .content {
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -776,26 +863,6 @@
         });
     });
 </script>
-    <!-- Dynamically Load Chatbot -->
-    <script>
-        function loadChatbotWidget() {
-            // Load the CSS for the chatbot widget
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = 'https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget.css?api_key=api_key1';
-            document.head.appendChild(link);
-
-            // Load the script for the chatbot widget
-            const script = document.createElement('script');
-            script.src = 'https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget?api_key=api_key1';
-            script.async = true;
-            document.body.appendChild(script);
-        }
-
-        // Load the widget after the page is fully loaded
-        window.addEventListener('load', loadChatbotWidget);
-    </script>
 </body>
 
 </html>
