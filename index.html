@@ -5,65 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iMaven Home</title>
     <script>
-        let iframe;
-
         function loadPage() {
-            iframe = document.getElementById('content-frame');
-            iframe.src = window.innerWidth >= 768 ? 'home.html' : 'mobile-home.html';
-        }
-
-        function checkScreenSize() {
-            loadPage();
+            // Check the screen size and load the correct HTML content
+            if (window.innerWidth >= 768) {
+                window.location.href = 'home.html'; // Load the desktop version
+            } else {
+                window.location.href = 'mobile-home.html'; // Load the mobile version
+            }
         }
 
         // Initial load
         window.onload = loadPage;
 
-        // Add event listener for resize to change iframe source
-        window.addEventListener('resize', checkScreenSize);
-
-        // Function to handle resize disabling during input focus
-        function disableResizeOnFocus() {
-            const inputs = document.querySelectorAll('input, textarea');
-
-            inputs.forEach(input => {
-                input.addEventListener('focus', () => {
-                    // Temporarily remove resize event listener when any input is focused
-                    window.removeEventListener('resize', checkScreenSize);
-                });
-
-                input.addEventListener('blur', () => {
-                    // Re-add resize event listener when input loses focus
-                    window.addEventListener('resize', checkScreenSize);
-                });
-            });
-        }
-
-        // Call disableResizeOnFocus once iframe has loaded
-        window.addEventListener('load', () => {
-            disableResizeOnFocus();
-        });
-
-        // Listen for messages from iframe to handle internal navigation
-        window.addEventListener('message', function(event) {
-            if (event.data.type === 'navigate') {
-                console.log('Navigating to:', event.data.url);
-                window.location.href = event.data.url;
-            }
+        // Check screen size on resize and load the correct content
+        window.addEventListener('resize', function() {
+            // Optional: Implement logic if you want to change the layout dynamically on resize
+            // Example: loadPage(); // Uncomment if you want to re-check size and load again
         });
     </script>
     <style>
-        body, html, iframe {
+        body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-            border: none;
             overflow: hidden;
         }
     </style>
 </head>
 <body>
-    <iframe id="content-frame" title="Content"></iframe>
+    <!-- Content will be loaded directly based on screen size -->
 </body>
 </html>
