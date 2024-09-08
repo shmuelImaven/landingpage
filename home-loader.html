@@ -9,13 +9,30 @@
             var iframe = document.getElementById('content-frame');
             iframe.src = window.innerWidth >= 768 ? 'home.html' : 'mobile-home.html';
         }
+
         function checkScreenSize() {
             loadPage();
         }
+
         // Initial load
         window.onload = loadPage;
+
         // Check on resize
         window.addEventListener('resize', checkScreenSize);
+
+        // Disable resize event during input focus
+        const originalResizeFunction = checkScreenSize;
+        const chatInput = document.getElementById('searchInput'); // Update with your input's actual ID
+
+        if (chatInput) {
+            chatInput.addEventListener('focus', () => {
+                window.removeEventListener('resize', originalResizeFunction);
+            });
+
+            chatInput.addEventListener('blur', () => {
+                window.addEventListener('resize', originalResizeFunction);
+            });
+        }
 
         // Listen for messages from iframe
         window.addEventListener('message', function(event) {
