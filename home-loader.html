@@ -5,28 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>iMaven Home</title>
     <script>
-        let currentOrientation = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
-
         function loadPage() {
             var iframe = document.getElementById('content-frame');
             iframe.src = window.innerWidth >= 768 ? 'home.html' : 'mobile-home.html';
         }
 
-        function checkOrientation() {
-            let newOrientation = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
-            if (newOrientation !== currentOrientation) {
-                currentOrientation = newOrientation;
-                loadPage();
-            }
-        }
-
-        // Initial load
-        window.onload = loadPage;
-
-        // Check on orientation change
-        window.addEventListener('orientationchange', function() {
-            setTimeout(checkOrientation, 100);  // Small delay to ensure dimensions have updated
-        });
+        // Load page only once when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', loadPage);
 
         // Listen for messages from iframe
         window.addEventListener('message', function(event) {
