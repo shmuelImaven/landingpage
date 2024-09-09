@@ -9,12 +9,12 @@
         function loadPage() {
             // Check the screen size and load the correct HTML content
             if (window.innerWidth >= 768) {
-                window.location.href = 'contactus.html'; // Load the desktop version
+                window.location.href = 'contact.html'; // Load the desktop version
             } else {
-                if (window.location.href == 'mobile-contactus.html') {
+                if (window.location.href == 'mobile-contact.html') {
                     window.removeEventListener('resize', resizeFunction)
                 } else {
-                    window.location.href = 'mobile-contactus.html'; // Load the mobile version
+                    window.location.href = 'mobile-contact.html'; // Load the mobile version
                     window.addEventListener('resize', resizeFunction)
                 }
             }

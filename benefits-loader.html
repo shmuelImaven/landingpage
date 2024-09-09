@@ -9,12 +9,12 @@
         function loadPage() {
             // Check the screen size and load the correct HTML content
             if (window.innerWidth >= 768) {
-                window.location.href = 'benifits.html'; // Load the desktop version
+                window.location.href = 'benefits.html'; // Load the desktop version
             } else {
-                if (window.location.href == 'mobile-benifits.html') {
+                if (window.location.href == 'mobile-benefits.html') {
                     window.removeEventListener('resize', resizeFunction)
                 } else {
-                    window.location.href = 'mobile-benifits.html'; // Load the mobile version
+                    window.location.href = 'mobile-benefits.html'; // Load the mobile version
                     window.addEventListener('resize', resizeFunction)
                 }
             }
