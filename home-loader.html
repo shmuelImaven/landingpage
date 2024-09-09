@@ -2,41 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iMaven Home</title>
-    <script>
-        function loadPage() {
-            var iframe = document.getElementById('content-frame');
-            iframe.src = window.innerWidth >= 768 ? 'home.html' : 'mobile-home.html';
-        }
-        function checkScreenSize() {
-            loadPage();
-        }
-        // Initial load
-        window.onload = loadPage;
-        // Check on resize
-        window.addEventListener('resize', checkScreenSize);
-
-        // Listen for messages from iframe
-        window.addEventListener('message', function(event) {
-            if (event.data.type === 'navigate') {
-                console.log('Navigating to:', event.data.url);
-                window.location.href = event.data.url;
-            }
-        });
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>iMaven</title>
     <style>
-        body, html, iframe {
+        body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-            border: none;
-            overflow: hidden;
+            overflow-x: hidden;
+        }
+        #content {
+            width: 100%;
+            height: 100%;
         }
     </style>
+    <script>
+        let currentVersion = '';
+
+        function loadContent(version) {
+            if (version === currentVersion) return;
+            
+            const contentDiv = document.getElementById('content');
+            const url = version === 'mobile' ? 'mobile-home.html' : 'home.html';
+
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    contentDiv.innerHTML = html;
+                    currentVersion = version;
+                    
+                    // Re-initialize any scripts or widgets
+                    initializeChatbot();
+                })
+                .catch(error => console.error('Error loading content:', error));
+        }
+
+        function checkScreenSize() {
+            const version = window.innerWidth < 768 ? 'mobile' : 'desktop';
+            loadContent(version);
+        }
+
+        function initializeChatbot() {
+            // Initialize your chatbot here
+            // This function will be called every time the content is loaded
+        }
+
+        // Initial load
+        document.addEventListener('DOMContentLoaded', checkScreenSize);
+
+        // Handle resize with debounce
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(checkScreenSize, 250);
+        });
+
+        // Prevent unwanted refreshes on mobile
+        window.addEventListener('scroll', (e) => e.preventDefault(), { passive: false });
+        window.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false });
+    </script>
 </head>
 <body>
-    <iframe id="content-frame" title="Content"></iframe>
+    <div id="content"></div>
 </body>
 </html>
