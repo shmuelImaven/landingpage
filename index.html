@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iMaven Home</title>
     <script>
         function loadPage() {
-            var iframe = document.getElementById('content-frame');
-            iframe.src = window.innerWidth >= 768 ? 'home.html' : 'mobile-home.html';
-            if (iframe.src === "mobile-home.html"){
-                //debugger
-                window.removeEventListener('resize',checkScreenSize)
+            // Check the screen size and load the correct HTML content
+            if (window.innerWidth >= 768) {
+                window.location.href = 'home.html'; // Load the desktop version
+            } else {
+                if (window.location.href == 'mobile-home.html') {
+                    window.removeEventListener('resize', resizeFunction)
+                } else {
+                    window.location.href = 'mobile-home.html'; // Load the mobile version
+                    window.addEventListener('resize', resizeFunction)
+                }
             }
         }
-        function checkScreenSize() {
-            loadPage();
+
+        function resizeFunction() {
+            loadPage()
         }
+
         // Initial load
         window.onload = loadPage;
-        // Check on resize
-        window.addEventListener('resize', checkScreenSize);
 
-        // Listen for messages from iframe
-        window.addEventListener('message', function(event) {
-            if (event.data.type === 'navigate') {
-                console.log('Navigating to:', event.data.url);
-                window.location.href = event.data.url;
-            }
-        });
+        // Check screen size on resize and load the correct content
+        window.addEventListener('resize', resizeFunction);
     </script>
     <style>
-        body, html, iframe {
+        body,
+        html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-            border: none;
             overflow: hidden;
         }
     </style>
 </head>
+
 <body>
-    <iframe id="content-frame" title="Content"></iframe>
+    <!-- Content will be loaded directly based on screen size -->
 </body>
+
 </html>
