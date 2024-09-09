@@ -8,6 +8,9 @@
         function loadPage() {
             var iframe = document.getElementById('content-frame');
             iframe.src = window.innerWidth >= 768 ? 'home.html' : 'mobile-home.html';
+            if (iframe.src === "mobile-home.html"){
+                window.removeEventListener('rezise',checkScreenSize)
+            }
         }
         function checkScreenSize() {
             loadPage();
