@@ -610,6 +610,7 @@ body {
 .article-item img {
     width: 100%;
     height: auto;
+    border-radius: 15px;
 }
 
 .article-info {
