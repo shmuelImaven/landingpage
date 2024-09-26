@@ -9,10 +9,64 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
     <title>iMaven - Expert Advice at Your Fingertips</title>
     <link rel="stylesheet" href="styles_mobile.css">
+    <style>
+        .contact-container {
+            max-width: 100%;
+            margin: 0;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+            margin-top: -50px;
+            position: relative;
+        }
+        .contact-container h2 {
+            color: #0560b5;
+            margin-top: 0;
+        }
+        .contact-container input[type="text"],
+        .contact-container input[type="email"],
+        .contact-container input[type="tel"],
+        .contact-container textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .contact-container textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .contact-container label {
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+        .contact-container .required {
+            color: #e74c3c;
+        }
+        .submit-button {
+            background-color: #0560b5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            display: block;
+            margin: 20px 0 0;
+            font-size: 16px;
+        }
+        .submit-button:hover {
+            background-color: #044e8f;
+        }
+        .banner {
+            height: 200px;
+        }
+    </style>
 </head>
 
 <body>
-
     <header class="header" style="display: flex; justify-content: space-between; align-items: center; background-color: #0560b5; padding: 10px 20px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
         <div class="logo-container" style="z-index: 1;">
             <div class="blue-logo"></div>
@@ -47,54 +101,30 @@
         </div>
     </nav>
 
-    <section class="banner" style="background-image: url('./Resources/background_contact.jpg'); background-size: cover; background-position: center; color: #ffffff; ">
+    <section class="banner" style="background-image: url('./Resources/background_contact.jpg'); background-size: cover; background-position: center; color: #ffffff;">
     </section>
 
-    <section class="contact-us-container">
-        <div class="contact-us-content">
-            <h2>Contact Us</h2>
-            <p>Would you like to schedule a demo, speak with customer support, or connect with HR? Provide your details, and the appropriate iMaven team will reach out to you shortly.</p>
-        </div>
-    
-        <form class="contact-us-form">
-            <select name="country" required>
-                <option value="" disabled selected>Select Country</option>
-                <option value="USA">USA</option>
-                <option value="Canada">Canada</option>
-                <option value="UK">UK</option>
-                <option value="Australia">Australia</option>
-            </select>
-    
-            <fieldset>
-                <legend>Number Of Advisers</legend>
-                <div class="radio-buttons">
-                    <label><input type="radio" name="advisers" value="less-than-5"> Less than 5</label>
-                    <label><input type="radio" name="advisers" value="5-20"> 5-20</label>
-                    <label><input type="radio" name="advisers" value="20-60"> 20-60</label>
-                    <label><input type="radio" name="advisers" value="60-100"> 60-100</label>
-                    <label><input type="radio" name="advisers" value="100+"> 100+</label>
-                </div>
-            </fieldset>
-    
-            <fieldset>
-                <legend>I would like to contact</legend>
-                <div class="radio-buttons">
-                    <label><input type="radio" name="contact-department" value="Sales"> Sales</label>
-                    <label><input type="radio" name="contact-department" value="Support"> Support</label>
-                    <label><input type="radio" name="contact-department" value="HR"> HR</label>
-                </div>
-            </fieldset>
-    
-            <div class="checkbox-container">
-                <label>
-                    <input type="checkbox" name="agreement">
-                    I agree to receive other communications from iMaven.
-                </label>
-            </div>
-    
-            <button type="submit" class="submit-button">Submit</button>
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <h3>Send us a Message</h3>
+        
+        <form>
+            <label for="name">Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+            
+            <label for="message">Message <span class="required">*</span></label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit" class="submit-button">Send Message</button>
         </form>
-    </section>
+    </div>
+
     <footer class="footer" style="background-color: #010207; color: #ffffff; padding: 20px; font-family: Arial, sans-serif;">
         <div class="footer-section">
             <h4 style="color: #ffffff; font-size: 14px; margin-bottom: 5px;">NAVIGATE</h4>

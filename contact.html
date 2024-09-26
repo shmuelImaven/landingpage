@@ -12,129 +12,90 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
     <style>
         .footer h4 a, .header .nav-links a {
-            color: inherit; /* Inherit the color from the parent element */
-            text-decoration: none; /* Remove the underline */
+            color: inherit;
+            text-decoration: none;
         }
 
         .footer h4 a:visited, .header .nav-links a:visited {
-            color: inherit; /* Keep the original color for visited links */
+            color: inherit;
         }
 
         .footer h4 a:hover, .header .nav-links a:hover {
-            color: #2773d6; /* Change to your desired hover color */
+            color: #2773d6;
         }
 
         .header .nav-links a {
-            font-weight: bold; /* Make the header links bold */
+            font-weight: bold;
         }
 
-        .contact-us-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 3rem;
-            background-color: #f4f7fc;
-        }
-
-        .contact-us-content, .contact-us-form {
+        .contact-container {
+            max-width: 800px;
+            margin: 40px auto;
             background: #ffffff;
-            padding: 2rem;
+            padding: 40px;
             border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
 
-        .contact-us-content {
-            flex: 1;
-            max-width: 500px;
-            margin-right: 2rem;
-            text-align: center;
+        .contact-container h2 {
+            color: #0560b5;
+            margin-top: 0;
         }
 
-        .contact-us-content img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .contact-us-form {
-            flex: 1;
-            max-width: 500px;
-        }
-
-        .contact-us-form input, .contact-us-form select, .contact-us-form textarea {
-            width: 100%;
-            padding: 0.75rem;
-            margin: 0.5rem 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .contact-us-form input[type="radio"], .contact-us-form input[type="checkbox"] {
-            width: auto;
-        }
-
-        .contact-us-form .radio-buttons {
+        .contact-container form {
             display: flex;
             flex-direction: column;
-            gap: 0rem; /* Optional: Adds some space between each radio button */
         }
 
-        .contact-us-form label {
-            font-weight: bold;
-            color: #2c2d2e; /* Change this to your desired color for "Number Of Agents" */
+        .contact-container input[type="text"],
+        .contact-container input[type="email"],
+        .contact-container input[type="tel"],
+        .contact-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
 
-        .contact-us-form .radio-buttons label {
-            color: #000000; /* Change this to your desired color for radio button text */
-            font-weight: normal; /* Ensure this is not bold if needed */
+        .contact-container textarea {
+            resize: vertical;
+            min-height: 150px;
         }
 
-        .contact-us-form .checkbox-container {
-            display: flex;
-            align-items: center;
-            margin: 0.5rem 0; /* Adjust margin as needed */
+        .contact-container label {
+            margin-top: 10px;
+            color: #555;
         }
 
-        .contact-us-form .checkbox-container input[type="checkbox"] {
-            margin-right: 0.5rem; /* Adjust space between checkbox and text as needed */
+        .contact-container .required {
+            color: #e74c3c;
         }
 
-        .contact-us-form .checkbox-container label {
-            margin: 0; /* Remove margin to align with checkbox */
-            font-weight: normal; /* Adjust font weight if needed */
+        .submit-button {
+            background-color: #0560b5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            align-self: flex-start;
         }
 
-        .contact-us-form .label-number-of-agents {
-            display: block;
-            margin-top: 10px; /* Adjust this value to add more space above */
-            margin-bottom: 7px; /* Adjust this value to add more space below */
+        .submit-button:hover {
+            background-color: #044e8f;
         }
                 
         .social-icons img {
-            transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
+            transition: transform 0.3s ease;
         }
 
         .social-icons img:hover {
-            transform: scale(1.1); /* Scale up the image slightly on hover */
-        }
-
-
-        .contact-us-form button {
-            padding: 0.75rem 1.5rem;
-            background-color: #2773d6;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            margin-top: 1rem; /* Add margin-top to move the button down */
-        }
-
-        .contact-us-form button:hover {
-            background-color: #262627;
+            transform: scale(1.1);
         }
     </style>
-
 </head>
 
 <body>
@@ -215,52 +176,26 @@
         </div>
     </div>
 
-    <!-- Contact Us Content -->
-    <div class="contact-us-container">
-        <div class="contact-us-content">
-            <h2>Contact Us</h2>
-            <p>
-                Would you like to schedule a demo, speak with customer support, or connect with HR? Provide your details, and the appropriate iMaven team will reach out to you shortly.
-            </p>
-            <img src="./Resources/contact.png" alt="Contact Image">
-        </div>
-        <div class="contact-us-form">
-            <form>
-                <input type="text" name="firstName" placeholder="First name" required>
-                <input type="text" name="lastName" placeholder="Last name" required>
-                <input type="email" name="email" placeholder="Business Email" required>
-                <input type="tel" name="phone" placeholder="Mobile phone number" required>
-                <select name="country" required>
-                    <option value="" disabled selected>Country</option>
-                    <option value="USA">USA</option>
-                    <option value="Canada">Canada</option>
-                    <option value="UK">UK</option>
-                    <option value="Australia">Australia</option>
-                    <!-- Add more countries as needed -->
-                </select>
-                <label class="label-number-of-agents">Number Of Advisers</label>
-                <div class="radio-buttons">
-                    <label><input type="radio" name="agents" value="Less than 10" required> Less than 5</label>
-                    <label><input type="radio" name="agents" value="10-50"> 5-20</label>
-                    <label><input type="radio" name="agents" value="50-100"> 20-60</label>
-                    <label><input type="radio" name="agents" value="100-500"> 60-100</label>
-                    <label><input type="radio" name="agents" value="500+"> 100+</label>
-                </div>
-                <select name="contactReason" required>
-                    <option value="" disabled selected>I would like to contact</option>
-                    <option value="Sales">Sales</option>
-                    <option value="Support">Support</option>
-                    <option value="HR">HR</option>
-                    <!-- Add more reasons as needed -->
-                </select>
-                <textarea name="message" placeholder="Your message" rows="5" required></textarea>
-                <div class="checkbox-container">
-                    <input type="checkbox" name="subscribe">
-                    <label>I agree to receive other communications from iMaven.</label>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+    <!-- Updated Contact Form -->
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <h3>Send us a Message</h3>
+        
+        <form>
+            <label for="name">Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+            
+            <label for="message">Message <span class="required">*</span></label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
     </div>
 
     <!-- Footer -->
@@ -333,45 +268,19 @@
         document.addEventListener('DOMContentLoaded', function () {
             console.log('DOM fully loaded and parsed');
 
-            const items = document.querySelectorAll('.carousel-item');
             const hamburger = document.getElementById('hamburger');
             const mobileNav = document.getElementById('mobile-nav');
             const searchButton = document.getElementById('searchButton');
             const searchInput = document.getElementById('searchInput');
 
-            if (!items || !hamburger || !mobileNav || !searchButton || !searchInput) {
+            if (!hamburger || !mobileNav || !searchButton || !searchInput) {
                 console.error('One or more elements are missing:', {
-                    items,
                     hamburger,
                     mobileNav,
                     searchButton,
                     searchInput
                 });
                 return;
-            }
-
-            let currentItem = 0;
-
-            const nextButton = document.getElementById('next');
-            if (nextButton) {
-                nextButton.addEventListener('click', () => {
-                    items[currentItem].classList.remove('active');
-                    currentItem = (currentItem + 1) % items.length;
-                    items[currentItem].classList.add('active');
-                });
-            } else {
-                console.warn('Next button not found');
-            }
-
-            const prevButton = document.getElementById('prev');
-            if (prevButton) {
-                prevButton.addEventListener('click', () => {
-                    items[currentItem].classList.remove('active');
-                    currentItem = (currentItem - 1 + items.length) % items.length;
-                    items[currentItem].classList.add('active');
-                });
-            } else {
-                console.warn('Previous button not found');
             }
 
             hamburger.addEventListener('click', () => {
