@@ -264,40 +264,6 @@
                 return;
             }
 
-            let currentItem = 0;
-
-            const nextButton = document.getElementById('next');
-            if (nextButton) {
-                nextButton.addEventListener('click', () => {
-                    items[currentItem].classList.remove('active');
-                    currentItem = (currentItem + 1) % items.length;
-                    items[currentItem].classList.add('active');
-                });
-            } else {
-                console.warn('Next button not found');
-            }
-
-            const prevButton = document.getElementById('prev');
-            if (prevButton) {
-                prevButton.addEventListener('click', () => {
-                    items[currentItem].classList.remove('active');
-                    currentItem = (currentItem - 1 + items.length) % items.length;
-                    items[currentItem].classList.add('active');
-                });
-            } else {
-                console.warn('Previous button not found');
-            }
-
-            hamburger.addEventListener('click', () => {
-                if (mobileNav.classList.contains('open')) {
-                    mobileNav.classList.remove('open');
-                    mobileNav.style.display = 'none';
-                } else {
-                    mobileNav.classList.add('open');
-                    mobileNav.style.display = 'flex';
-                }
-                hamburger.classList.toggle('open');
-            });
 
             searchButton.addEventListener('click', function () {
                 const query = searchInput.value;
