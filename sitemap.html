@@ -87,28 +87,45 @@
 </head>
 
 <body>
+    <!-- top div -->
     <div class="top-header">
         <span>&nbsp;</span>
     </div>
-    <!-- Header -->
+
     <div class="header">
         <div class="logo-container">
             <div class="blue-logo"></div>
         </div>
         <div class="nav-links font-inria">
-            <div><a href="home-loader.html">Home</a></div>
-            <div><a href="services-loader.html">Services</a></div>
-            <div><a href="aboutus-loader.html">About Us</a></div>
-            <div><a href="contact-loader.html">Contact</a></div>
-        </div>
-        <div class="auth-links font-inter">
             <div>
-                <div class="auth-link" style="background-image: url('./Resources/signup-icon.svg');"></div>
-                <div><span>Sign Up</span></div>
+                <a href="home-loader.html">
+                    <img src="./Resources/home.svg" alt="Home" class="nav-icon">
+                    Home
+                </a>
             </div>
             <div>
-                <div class="auth-link" style="background-image: url('./Resources/login-icon.svg');"></div>
-                <div><span>Login</span></div>
+                <a href="services-loader.html">
+                    <img src="./Resources/services.svg" alt="Services" class="nav-icon">
+                    Services
+                </a>
+            </div>
+            <div>
+                <a href="aboutus-loader.html">
+                    <img src="./Resources/aboutUs.svg" alt="About Us" class="nav-icon">
+                    About Us
+                </a>
+            </div>
+            <div>
+                <a href="contact-loader.html">
+                    <img src="./Resources/contactUS.svg" alt="Contact" class="nav-icon">
+                    Contact
+                </a>
+            </div>
+        </div>
+        <div class="auth-links font-inter">
+            <div class="dashboard-link-container">
+                <div class="auth-link" style="background-image: url('./Resources/signup-icon.svg');"></div>
+                <a href="https://platform.imavenai.com" class="dashboard-link">Access Your Personalized Dashboard</a>
             </div>
         </div>
         <div class="hamburger" id="hamburger">
@@ -117,14 +134,45 @@
             <div></div>
         </div>
     </div>
-    <div class="mobile-nav font-inria" id="mobile-nav">
-        <div>Home</div>
-        <div>Services</div>
-        <div>About Us</div>
-        <div>Contact</div>
-        <div>Sign Up</div>
-        <div>Login</div>
-    </div>
+    
+    <style>
+        .nav-links a {
+            display: flex;
+            align-items: center;
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+    
+        .nav-links a:hover {
+            color: #2773d6;
+        }
+    
+        .nav-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+    
+        .dashboard-link-container {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+    
+        .dashboard-link {
+            color: #2773d6;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 10px;
+            transition: color 0.3s ease;
+        }
+    
+        .dashboard-link:hover {
+            color: #5a9de6;
+            text-decoration: underline;
+        }
+    </style>
 
     <!-- Banner Image -->
     <div class="banner banner-sitemap">
