@@ -86,93 +86,118 @@
 
 </head>
 
-<body>
-    <!-- top div -->
-    <div class="top-header">
-        <span>&nbsp;</span>
-    </div>
+<div class="top-header"></div>
 
-    <div class="header">
-        <div class="logo-container">
-            <div class="blue-logo"></div>
-        </div>
-        <div class="nav-links font-inria">
-            <div>
-                <a href="home-loader.html">
-                    <img src="./Resources/home-460.svg" alt="Home" class="nav-icon">
-                    Home
-                </a>
-            </div>
-            <div>
-                <a href="services-loader.html">
-                    <img src="./Resources/services-4.svg" alt="Services" class="nav-icon">
-                    Services
-                </a>
-            </div>
-            <div>
-                <a href="aboutus-loader.html">
-                    <img src="./Resources/about-us-25.svg" alt="About Us" class="nav-icon">
-                    About Us
-                </a>
-            </div>
-            <div>
-                <a href="contact-loader.html">
-                    <img src="./Resources/email-97.svg" alt="Contact" class="nav-icon">
-                    Contact
-                </a>
-            </div>
-        </div>
-        <div class="auth-links font-inter">
-            <div class="dashboard-link-container">
-                <div class="auth-link" style="background-image: url('./Resources/signup-icon.svg');"></div>
-                <a href="https://platform.imavenai.com" class="dashboard-link">Access Your Personalized Dashboard</a>
-            </div>
-        </div>
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+<header class="main-header">
+    <div class="logo-container">
+        <img src="./Resources/icon.svg" alt="iMaven AI Logo" class="logo">
+        <span class="logo-text">iMaven AI</span>
     </div>
-    
-    <style>
-        .nav-links a {
-            display: flex;
-            align-items: center;
-            color: inherit;
-            text-decoration: none;
-            transition: color 0.3s ease;
+    <nav class="nav-links">
+        <a href="home-loader.html" class="nav-item">
+            <img src="./Resources/home-460.svg" alt="Home" class="nav-icon">
+            Home
+        </a>
+        <a href="services-loader.html" class="nav-item">
+            <img src="./Resources/services-4.svg" alt="Services" class="nav-icon">
+            Services
+        </a>
+        <a href="aboutus-loader.html" class="nav-item">
+            <img src="./Resources/about-us-25.svg" alt="About Us" class="nav-icon">
+            About Us
+        </a>
+        <a href="contact-loader.html" class="nav-item">
+            <img src="./Resources/email-97.svg" alt="Contact" class="nav-icon">
+            Contact
+        </a>
+    </nav>
+    <div class="dashboard-link">
+        <img src="./Resources/signup-icon.svg" alt="Dashboard" class="dashboard-icon">
+        <a href="https://platform.imavenai.com">Access Your Personalized Dashboard</a>
+    </div>
+</header>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .top-header {
+        background-color: #032b54;
+        height: 10px;
+    }
+
+    .main-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .logo-text {
+        font-weight: bold;
+        font-size: 16px;
+        color: #5387bd;
+        white-space: nowrap;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        color: #1e2a3f;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .nav-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }
+
+    .dashboard-link {
+        display: flex;
+        align-items: center;
+    }
+
+    .dashboard-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }
+
+    .dashboard-link a {
+        color: #366492;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+        .nav-links, .dashboard-link {
+            display: none;
         }
-    
-        .nav-links a:hover {
-            color: #2773d6;
-        }
-    
-        .nav-icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-        }
-    
-        .dashboard-link-container {
-            display: flex;
-            align-items: center;
-            white-space: nowrap;
-        }
-    
-        .dashboard-link {
-            color: #0b3974;
-            text-decoration: none;
-            font-weight: bold;
-            margin-left: 10px;
-            transition: color 0.3s ease;
-        }
-    
-        .dashboard-link:hover {
-            color: #5a9de6;
-            text-decoration: underline;
-        }
-    </style>
+    }
+</style>
 
     <!-- Banner Image -->
     <div class="banner banner-sitemap">
