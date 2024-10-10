@@ -96,8 +96,6 @@
     </style>
 </head>
 
-<div class="top-header"></div>
-
 <header class="main-header">
     <div class="logo-container">
         <img src="./Resources/icon.svg" alt="iMaven AI Logo" class="logo">
@@ -131,11 +129,7 @@
     body {
         margin: 0;
         font-family: 'Inter', sans-serif;
-    }
-
-    .top-header {
-        background-color: #032b54;
-        height: 10px;
+        padding-top: 60px; /* Adjusted to account for fixed header height */
     }
 
     .main-header {
@@ -145,6 +139,11 @@
         padding: 10px 20px;
         background-color: #ffffff;
         border-bottom: 1px solid #e0e0e0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
     }
 
     .logo-container {
@@ -208,7 +207,6 @@
         }
     }
 </style>
-
     <!-- Banner Image -->
     <div class="banner">
         <div class="banner-content">
