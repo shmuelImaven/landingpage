@@ -12,35 +12,34 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
     <style>
         .footer h4 a, .header .nav-links a {
-            color: inherit; /* Inherit the color from the parent element */
-            text-decoration: none; /* Remove the underline */
+            color: inherit;
+            text-decoration: none;
         }
 
         .footer h4 a:visited, .header .nav-links a:visited {
-            color: inherit; /* Keep the original color for visited links */
+            color: inherit;
         }
 
         .footer h4 a:hover, .header .nav-links a:hover {
-            color: #2773d6; /* Change to your desired hover color */
+            color: #2773d6;
         }
                 
         .header .nav-links a {
-            font-weight: bold; /* Make the header links bold */
+            font-weight: bold;
         }
 
         .benefits-image {
-            border-radius: 15px; /* Add rounded corners to the benefits image */
+            border-radius: 15px;
         }
         
         .social-icons img {
-            transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
+            transition: transform 0.3s ease;
         }
 
         .social-icons img:hover {
-            transform: scale(1.1); /* Scale up the image slightly on hover */
+            transform: scale(1.1);
         }
 
-        /* Chatbot Button Styling */
         .chatbot-button {
             position: fixed;
             bottom: 20px;
@@ -49,8 +48,8 @@
             border-radius: 50%;
             padding: 15px;
             cursor: pointer;
-            transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
-            animation: pulse 1.5s infinite; /* Apply the pulse animation */
+            transition: transform 0.3s ease;
+            animation: pulse 1.5s infinite;
         }
 
         @keyframes pulse {
@@ -66,8 +65,8 @@
         }
 
         .chatbot-button:hover {
-            animation: none; /* Stop the animation on hover */
-            transform: scale(1.1); /* Scale up the button slightly on hover */
+            animation: none;
+            transform: scale(1.1);
         }
 
         .chatbot-button img {
@@ -75,27 +74,26 @@
             height: 75px;
         }
 
-        /* Chatbot Container Styling */
         .chatbot-container {
             position: fixed;
-            bottom: 70px; /* Adjust as needed */
+            bottom: 70px;
             right: 20px;
-            width: 300px; /* Adjust as needed */
-            height: 400px; /* Adjust as needed */
+            width: 300px;
+            height: 400px;
             background-color: #ffffff;
             border: 1px solid #ccc;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            display: none; /* Hidden by default */
+            display: none;
         }
 
-        /* Add padding for the chatbot content */
         .chatbot-container .content {
             padding: 20px;
         }
     </style>
 </head>
 
+<body>
 <header class="main-header">
     <div class="logo-container">
         <img src="./Resources/icon.svg" alt="iMaven AI Logo" class="logo">
@@ -129,7 +127,7 @@
     body {
         margin: 0;
         font-family: 'Inter', sans-serif;
-        padding-top: 60px; /* Adjusted to account for fixed header height */
+        padding-top: 60px;
     }
 
     .main-header {
@@ -244,9 +242,7 @@
     <!-- Stats -->
     <div class="stats-container font-inter">
         <div style="width: 15vw;">
-            <!-- icon -->
             <div style="background-image: url('./Resources/stats-img-1.svg');"></div>
-            <!-- stats -->
             <div class="stats-container-item-data">
                 <div>
                     <span class="stats-numbers">300</span>
@@ -257,9 +253,7 @@
             </div>
         </div>
         <div style="width: 14vw;">
-            <!-- icon -->
             <div style="background-image: url('./Resources/stats-img-2.svg');"></div>
-            <!-- stats -->
             <div class="stats-container-item-data">
                 <div>
                     <span class="stats-numbers">400</span>
@@ -270,9 +264,7 @@
             </div>
         </div>
         <div style="width: 12vw;">
-            <!-- icon -->
             <div style="background-image: url('./Resources/stats-img-3.svg');"></div>
-            <!-- stats -->
             <div class="stats-container-item-data">
                 <div>
                     <span class="stats-numbers">50000</span>
@@ -283,9 +275,7 @@
             </div>
         </div>
         <div style="width: 14vw;">
-            <!-- icon -->
             <div style="background-image: url('./Resources/stats-img-4.svg');"></div>
-            <!-- stats -->
             <div class="stats-container-item-data">
                 <div>
                     <span class="stats-numbers">100%</span>
@@ -299,31 +289,24 @@
 
     <!-- Imaven Steps -->
     <div style="padding: 0 5rem;">
-        <!-- title -->
         <div style="display: flex;flex-direction: column;align-items: center;margin-top: 75px;">
             <span class="font-inria" style="font-weight: 700;font-size: 2rem;">
                 Simplify your path to expert advice with Imaven
             </span>
-            <!-- Line -->
-            <div
-                style="background-color: #B5E1FA;border: 2px;width: 100px;height: 2px;margin-top: 2vh; text-align: center;margin-bottom: 75px;">
+            <div style="background-color: #B5E1FA;border: 2px;width: 100px;height: 2px;margin-top: 2vh; text-align: center;margin-bottom: 75px;">
                 &nbsp;
             </div>
         </div>
         <div style="margin-top: 50px;margin-bottom: 75px; display: flex;justify-content: space-around;flex-wrap: wrap;">
-            <!-- Initiate a Consultation step -->
             <div class="step-wrapper">
-                <!-- icon -->
                 <div class="icon-border">
                     <div style="background-image: url('./Resources/steps-img-1.svg');"></div>
                 </div>
-                <!-- title -->
                 <div>
                     <span class="font-inter" style="font-size: 1.2rem;font-weight: 700;">
                         Initiate a Consultation
                     </span>
                 </div>
-                <!-- explain -->
                 <div>
                     <span class="font-inter">
                         Launch your advisory journey by entering your question in the chat. Our AI will guide you
@@ -331,19 +314,15 @@
                     </span>
                 </div>
             </div>
-            <!-- Choose an Expert step -->
             <div class="step-wrapper">
-                <!-- icon -->
                 <div class="icon-border">
                     <div style="background-image: url('./Resources/steps-img-2.svg');"></div>
                 </div>
-                <!-- title -->
                 <div>
                     <span class="font-inter" style="font-size: 1.2rem;font-weight: 700;">
                         Choose an Expert
                     </span>
                 </div>
-                <!-- explain -->
                 <div>
                     <span class="font-inter">
                         Browse through our list of verified advisers or let our AI recommend the best match based on
@@ -351,19 +330,15 @@
                     </span>
                 </div>
             </div>
-            <!-- Engage and Collaborate step -->
             <div class="step-wrapper">
-                <!-- icon -->
                 <div class="icon-border">
                     <div style="background-image: url('./Resources/steps-img-3.svg');"></div>
                 </div>
-                <!-- title -->
                 <div>
                     <span class="font-inter" style="font-size: 1.2rem;font-weight: 700;">
                         Engage and Collaborate
                     </span>
                 </div>
-                <!-- explain -->
                 <div>
                     <span class="font-inter">
                         Utilize interactive tools within your dedicated WorkRoom to communicate, share files, and
@@ -371,19 +346,15 @@
                     </span>
                 </div>
             </div>
-            <!-- Secure Transactions step -->
             <div class="step-wrapper">
-                <!-- icon -->
                 <div class="icon-border">
                     <div style="background-image: url('./Resources/steps-img-4.svg');"></div>
                 </div>
-                <!-- title -->
                 <div>
                     <span class="font-inter" style="font-size: 1.2rem;font-weight: 700;">
                         Secure Transactions
                     </span>
                 </div>
-                <!-- explain -->
                 <div>
                     <span class="font-inter">
                         Complete the advisory session with secure payments. Choose your preferred payment method and
@@ -399,30 +370,22 @@
     </div>
 
     <!-- benefits for advisor -->
-    <div
-        style="background-color: #F8FBFF;padding-top: .8rem;padding-bottom: .8rem;padding-left: 1rem;padding-right: 1rem">
-        <!-- Title -->
+    <div style="background-color: #F8FBFF;padding-top: .8rem;padding-bottom: .8rem;padding-left: 1rem;padding-right: 1rem">
         <div style="display: flex;flex-direction: column;align-items: center;">
             <span class="font-inria" style="font-weight: 700;font-size: 2rem; margin-top: 75px;">
                 Benefits for advisors
             </span>
-            <!-- Line -->
-            <div
-                style="background-color: #B5E1FA;border: 2px;width: 100px;height: 2px;margin-top: 2vh; text-align: center;margin-bottom: 75px;">
+            <div style="background-color: #B5E1FA;border: 2px;width: 100px;height: 2px;margin-top: 2vh; text-align: center;margin-bottom: 75px;">
                 &nbsp;
             </div>
         </div>
 
         <div style="padding: 4vw;display: flex;align-items: center;flex-wrap: wrap;justify-content: center;">
-            <!-- Benefits Image -->
             <div class="benefits-image"
                 style="background-image: url('./Resources/benefits-img.svg');width: 100%;max-width: 575px;height: 362px;background-repeat: no-repeat;background-position: center;">
             </div>
-            <!-- points -->
             <div class="benefit-points-wrapper">
-                <!-- save time -->
                 <div class="benefits-point">
-                    <!-- icon -->
                     <div style="background-image: url('./Resources/benefits-img-1.svg');"></div>
                     <div>
                         <div>
@@ -437,9 +400,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- scale up -->
                 <div class="benefits-point">
-                    <!-- icon -->
                     <div style="background-image: url('./Resources/benefits-img-2.svg');"></div>
                     <div>
                         <div>
@@ -454,9 +415,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- monetize knowledge -->
                 <div class="benefits-point">
-                    <!-- icon -->
                     <div style="background-image: url('./Resources/benefits-img-3.svg');"></div>
                     <div>
                         <div>
@@ -477,19 +436,15 @@
         <div style="display: flex;justify-content: center;margin-bottom: 75px;">
             <a href="benefits-loader.html" class="view-more font-inter">View more</a>
         </div>
-
     </div>
 
     <!-- why people choose -->
     <div style="background-color: #0366a3;padding-top: 4vh;padding-bottom: 4vh;padding-left: 6vw;padding-right: 6vw;">
-        <!-- Title -->
         <div style="display: flex;flex-direction: column;align-items: center;">
             <span class="font-inria" style="color: #FFFFFF;font-weight: 700;font-size: 2rem;">
                 Why people choose us
             </span>
-            <!-- Line -->
-            <div
-                style="background-color: #B5E1FA;border: 2px;width: 100px;height: 2px;margin-top: 2vh; text-align: center;margin-bottom: 75px;">
+            <div style="background-color: #B5E1FA;border: 2px;width: 100px;height: 2px;margin-top: 2vh; text-align: center;margin-bottom: 75px;">
                 &nbsp;
             </div>
         </div>
@@ -502,8 +457,7 @@
                     <div>
                         <div class="subtitle font-inria" style="text-align: right;">Credibility</div>
                         <div class="description font-inria" style="text-align: right;">We rigorously vet all advisers,
-                            showcasing
-                            their credentials and user reviews to ensure you connect with trusted professionals who have
+                            showcasing their credentials and user reviews to ensure you connect with trusted professionals who have
                             proven expertise.</div>
                     </div>
                 </div>
@@ -514,8 +468,7 @@
                     <div>
                         <div class="subtitle font-inria" style="text-align: right;">Flexibility</div>
                         <div class="description font-inria" style="text-align: right;">Imaven offers various
-                            consultation models
-                            and customizable advisory services to cater to your specific needs, ensuring you receive the
+                            consultation models and customizable advisory services to cater to your specific needs, ensuring you receive the
                             guidance you desire in the way that suits you best.</div>
                     </div>
                 </div>
@@ -526,8 +479,7 @@
                     <div>
                         <div class="subtitle font-inria" style="text-align: right;">Security</div>
                         <div class="description font-inria" style="text-align: right;">Your transactions are safeguarded
-                            with our
-                            secure escrow system, giving you peace of mind knowing your financial interactions are
+                            with our secure escrow system, giving you peace of mind knowing your financial interactions are
                             protected.</div>
                     </div>
                 </div>
@@ -540,12 +492,10 @@
                     <div>
                         <div class="subtitle font-inria" style="text-align: left;">Value</div>
                         <div class="description font-inria" style="text-align: left;">Imaven provides exceptional
-                            advisory services
-                            at competitive rates, ensuring you get outstanding value without compromising on quality.
+                            advisory services at competitive rates, ensuring you get outstanding value without compromising on quality.
                         </div>
                     </div>
                 </div>
-
                 <div class="grid-item" style="flex-direction: row;">
                     <div style="padding-right: 10px;">
                         <img src="./Resources/support-img.svg" alt="Support Icon" class="icon">
@@ -553,12 +503,10 @@
                     <div>
                         <div class="subtitle font-inria" style="text-align: left;">Support</div>
                         <div class="description font-inria" style="text-align: left;">Our customer care team is
-                            available around
-                            the clock to assist you with any inquiries, ensuring seamless experiences anytime, anywhere.
+                            available around the clock to assist you with any inquiries, ensuring seamless experiences anytime, anywhere.
                         </div>
                     </div>
                 </div>
-
                 <div class="grid-item" style="width: 100%;display: flex;justify-content: center;">
                     <a href="chooseus-loader.html" class="view-more font-inter">View more</a>
                 </div>
@@ -568,30 +516,24 @@
 
     <!-- feedback from users -->
     <div style="padding: 4vh;padding-left: 6vw;padding-right: 6vw;">
-        <!-- Title -->
         <div style="display: flex;flex-direction: column;align-items: center;">
             <span class="font-inria" style="color: #282828;font-weight: 700;font-size: 2rem;">
                 Feedback from our users
             </span>
-            <!-- Line -->
-            <div
-                style="background-color: #B5E1FA;border: 2px;width: 100px;height: 2px;margin-top: 2vh; text-align: center;margin-bottom: 75px;">
+            <div style="background-color: #B5E1FA;border: 2px;width: 100px;height: 2px;margin-top: 2vh; text-align: center;margin-bottom: 75px;">
                 &nbsp;
             </div>
         </div>
         <div style="display: flex;align-items: center;">
             <div class="carousel-button" id="prev">
-                <div style="background-image: url(./Resources/arrow-left.svg);">
-
-                </div>
+                <div style="background-image: url(./Resources/arrow-left.svg);"></div>
             </div>
             <div class="carousel-container">
                 <div class="carousel-item active">
-                    <p class="font-inter" style="width: 68%;">Joining Imaven has transformed how I offer my services.
+                    <p class="font-inter" style="width: 40%;">Joining Imaven has transformed how I offer my services.
                         The platform's user-friendly interface allows me to connect with clients quickly, making it possible to provide
                         rapid responses and efficient advice. It's truly streamlined my workflow and increased client satisfaction.</p>
-                    <!-- Adviser Picture -->
-                    <div style="display: flex; align-items: center; margin-top: 15px;">
+                    <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
                         <img src="./Resources/jameson_grant.jpg" alt="Jameson Grant" class="adviser-picture">
                         <p class="font-inter" style="margin: 0;">
                             <strong style="font-size: 1.1em;">Jameson Grant</strong><br>
@@ -599,118 +541,109 @@
                         </p>
                     </div>
                 </div>               
-                <div class="carousel-item ">
-                    <p class="font-inter" style="width: 68%;">Imaven has been a game-changer for managing my coaching sessions.
+                <div class="carousel-item">
+                    <p class="font-inter" style="width: 40%;">Imaven has been a game-changer for managing my coaching sessions.
                         The tools are intuitive and the AI assists wonderfully in organizing my schedule.
                         I can focus more on providing quality advice rather than on administrative tasks.
                         Highly recommended for professionals looking to expand their reach</p>
-                    <!-- Adviser Picture -->
-                    <div style="display: flex; align-items: center; margin-top: 15px;">
-                        <img src="./Resources/Lily_Chen.jpg" alt="Jameson Grant" class="adviser-picture">
+                    <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
+                        <img src="./Resources/Lily_Chen.jpg" alt="Lily Chen" class="adviser-picture">
                         <p class="font-inter" style="margin: 0;">
                             <strong style="font-size: 1.1em;">Lily Chen</strong><br>
                             <span style="font-size: 0.8em;">Health and Wellness Coach</span>
                         </p>
                     </div>    
                 </div>  
-                <div class="carousel-item ">
-                    <p class="font-inter" style="width: 68%;">The ease of use and the speed with which I can connect with clients on Imaven
+                <div class="carousel-item">
+                    <p class="font-inter" style="width: 40%;">The ease of use and the speed with which I can connect with clients on Imaven
                         is unmatched. The platform's design is top-notch, facilitating a smooth advisory process.
                         This is how modern consultancy should be – quick, secure, and effective.</p>
-                    <!-- Adviser Picture -->
-                    <div style="display: flex; align-items: center; margin-top: 15px;">
-                        <img src="./Resources/Marco_ischer.jpg" alt="Jameson Grant" class="adviser-picture">
+                    <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
+                        <img src="./Resources/Marco_ischer.jpg" alt="Marco Fischer" class="adviser-picture">
                         <p class="font-inter" style="margin: 0;">
                             <strong style="font-size: 1.1em;">Marco Fischer</strong><br>
                             <span style="font-size: 0.8em;">Business Strategist</span>
                         </p>
                     </div>      
                 </div>              
-                <div class="carousel-item ">
-                    <p class="font-inter" style="width: 68%;">I've used several platforms before, but Imaven stands out for its swift
+                <div class="carousel-item">
+                    <p class="font-inter" style="width: 40%;">I've used several platforms before, but Imaven stands out for its swift
                         matchmaking and superb organizational tools. It allows me to provide personalized advice efficiently, 
                         enhancing my interaction with each client. Definitely a boost for my career coaching services.</p>
-                    <!-- Adviser Picture -->
-                    <div style="display: flex; align-items: center; margin-top: 15px;">
-                        <img src="./Resources/Sophia_Rodriguez.jpg" alt="Jameson Grant" class="adviser-picture">
+                    <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
+                        <img src="./Resources/Sophia_Rodriguez.jpg" alt="Sophia Rodriguez" class="adviser-picture">
                         <p class="font-inter" style="margin: 0;">
                             <strong style="font-size: 1.1em;">Sophia Rodriguez</strong><br>
                             <span style="font-size: 0.8em;">Career Coach</span>
                         </p>
                     </div> 
                 </div>  
-                <div class="carousel-item ">
-                    <p class="font-inter" style="width: 68%;">Imaven provides all the tools I need to operate efficiently and help my
+                <div class="carousel-item">
+                    <p class="font-inter" style="width: 40%;">Imaven provides all the tools I need to operate efficiently and help my
                         clients make informed decisions quickly. The platform's integration of AI makes it easy to manage multiple clients, 
                         maintaining a high standard of personalized advice.</p>
-                    <!-- Adviser Picture -->
-                    <div style="display: flex; align-items: center; margin-top: 15px;">
-                        <img src="./Resources/Arjun_Agate.jpg" alt="Jameson Grant" class="adviser-picture">
+                    <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
+                        <img src="./Resources/Arjun_Agate.jpg" alt="Arjun Agate" class="adviser-picture">
                         <p class="font-inter" style="margin: 0;">
                             <strong style="font-size: 1.1em;">Arjun Agate</strong><br>
                             <span style="font-size: 0.8em;">Shopping Advisor</span>
                         </p>
                     </div> 
                 </div>  
-                <div class="carousel-item ">
-                    <p class="font-inter" style="width: 68%;">The guidance I received from my financial advisor on Imaven was incredibly
+                <div class="carousel-item">
+                    <p class="font-inter" style="width: 40%;">The guidance I received from my financial advisor on Imaven was incredibly
                         fast and precisely what I needed to steer my startup in the right direction. Signing up was easy, and
                         the advisor was not only knowledgeable but also very responsive.</p>
-                    <!-- Adviser Picture -->
-                    <div style="display: flex; align-items: center; margin-top: 15px;">
-                        <img src="./Resources/Rachel_Kim.jpg" alt="Jameson Grant" class="adviser-picture">
+                    <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
+                        <img src="./Resources/Rachel_Kim.jpg" alt="Rachel Kim" class="adviser-picture">
                         <p class="font-inter" style="margin: 0;">
                             <strong style="font-size: 1.1em;">Rachel Kim</strong><br>
                             <span style="font-size: 0.8em;">Entrepreneur</span>
                         </p>
                     </div> 
                 </div>  
-                <div class="carousel-item ">
-                    <p class="font-inter" style="width: 68%;">I was amazed at how quickly I was able to connect with a life coach who really
+                <div class="carousel-item">
+                    <p class="font-inter" style="width: 40%;">I was amazed at how quickly I was able to connect with a life coach who really
                         understands my challenges. Imaven made it easy to start the conversation, and my coach has been
                         instrumental in helping me achieve my goals efficiently.</p>
-                    <!-- Adviser Picture -->
-                    <div style="display: flex; align-items: center; margin-top: 15px;">
-                        <img src="./Resources/Michael_Andrews.jpg" alt="Jameson Grant" class="adviser-picture">
+                    <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
+                        <img src="./Resources/Michael_Andrews.jpg" alt="Michael Andrews" class="adviser-picture">
                         <p class="font-inter" style="margin: 0;">
                             <strong style="font-size: 1.1em;">Michael Andrews</strong><br>
                             <span style="font-size: 0.8em;">Personal Development Enthusiast</span>
                         </p>
                     </div> 
                 </div>  
-                <div class="carousel-item ">
-                    <p class="font-inter" style="width: 68%;">Finding a shopping advisor who understands my taste and budget on Imaven was
+                <div class="carousel-item">
+                    <p class="font-inter" style="width: 40%;">Finding a shopping advisor who understands my taste and budget on Imaven was
                         effortless. The platform is user-friendly, and I received excellent advice that helped me make
                         smart purchases quickly. A fantastic service that I highly recommend!</p>
-                    <!-- Adviser Picture -->
-                    <div style="display: flex; align-items: center; margin-top: 15px;">
-                        <img src="./Resources/Anna_Petrova.jpg" alt="Jameson Grant" class="adviser-picture">
+                    <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
+                        <img src="./Resources/Anna_Petrova.jpg" alt="Anna Petrova" class="adviser-picture">
                         <p class="font-inter" style="margin: 0;">
                             <strong style="font-size: 1.1em;">Anna Petrova</strong><br>
                             <span style="font-size: 0.8em;">Online Shopper</span>
                         </p>
                     </div> 
                 </div>  
-                <div class="carousel-item ">
-                    <p class="font-inter" style="width: 68%;">The speed at which I found a wellness coach ready to help me on Imaven was
+                <div class="carousel-item">
+                    <p class="font-inter" style="width: 40%;">The speed at which I found a wellness coach ready to help me on Imaven was
                         astounding. The platform is straightforward to navigate, and the interaction with my coach was
                         smooth and productive. It's been an empowering experience.</p>
-                    <!-- Adviser Picture -->
-                    <div style="display: flex; align-items: center; margin-top: 15px;">
-                        <img src="./Resources/Tom_Richardson.jpg" alt="Jameson Grant" class="adviser-picture">
+                    <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
+                        <img src="./Resources/Tom_Richardson.jpg" alt="Tom Richardson" class="adviser-picture">
                         <p class="font-inter" style="margin: 0;">
                             <strong style="font-size: 1.1em;">Tom Richardson</strong><br>
                             <span style="font-size: 0.8em;">Health Enthusiast</span>
                         </p>
                     </div> 
                 </div>  
-                <div class="carousel-item ">
-                    <p class="font-inter" style="width: 68%;">I needed quick advice on home decor and stumbled upon Imaven. The process was
+                <div class="carousel-item">
+                    <p class="font-inter" style="width: 40%;">I needed quick advice on home decor and stumbled upon Imaven. The process was
                         incredibly simple from start to finish, and I got fantastic, personalized advice from an expert
                         in no time. The platform's efficiency is truly commendable.</p>
-                    <!-- Adviser Picture -->
-                    <div style="display: flex; align-items: center; margin-top: 15px;">
-                        <img src="./Resources/Samantha_Lee.jpg" alt="Jameson Grant" class="adviser-picture">
+                    <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
+                        <img src="./Resources/Samantha_Lee.jpg" alt="Samantha Lee" class="adviser-picture">
                         <p class="font-inter" style="margin: 0;">
                             <strong style="font-size: 1.1em;">Samantha Lee</strong><br>
                             <span style="font-size: 0.8em;">Homeowner</span>
@@ -719,22 +652,18 @@
                 </div>  
             </div>
             <div class="carousel-button" id="next">
-                <div style="background-image: url(./Resources/arrow-right.svg);">
-                </div>
+                <div style="background-image: url(./Resources/arrow-right.svg);"></div>
             </div>
         </div>
     </div>
 
     <!-- insights -->
     <div style="background-color: #F8FBFF;padding: 4vh 0;padding-left: 6vw;padding-right: 6vw;">
-        <!-- Title -->
         <div style="display: flex;flex-direction: column;align-items: center;">
             <span class="font-inria" style="color: #282828;font-weight: 700;font-size: 2rem;">
                 Imaven Insight
             </span>
-            <!-- Line -->
-            <div
-                style="background-color: #B5E1FA;border: 2px;width: 100px;height: 2px;margin-top: 2vh; text-align: center;margin-bottom: 75px;">
+            <div style="background-color: #B5E1FA;border: 2px;width: 100px;height: 2px;margin-top: 2vh; text-align: center;margin-bottom: 75px;">
                 &nbsp;
             </div>
         </div>
@@ -744,16 +673,14 @@
                     <img src="./Resources/trend_analize.png" alt="Market Trends and Analysis">
                     <div class="article-info">
                         <div class="article-date font-inter">December, 2024</div>
-                        <div class="article-title font-inter" title="Market Trends and Analysis">Market Trends and
-                            Analysis</div>
+                        <div class="article-title font-inter" title="Market Trends and Analysis">Market Trends and Analysis</div>
                     </div>
                 </div>
                 <div class="article-item">
                     <img src="./Resources/bestpractice.png" alt="Advisory Best Practices">
                     <div class="article-info">
                         <div class="article-date font-inter">May, 2024</div>
-                        <div class="article-title font-inter" title="Advisory Best Practices">Advisory Best Practices
-                        </div>
+                        <div class="article-title font-inter" title="Advisory Best Practices">Advisory Best Practices</div>
                     </div>
                 </div>
                 <div class="article-item">
@@ -767,8 +694,7 @@
                     <img src="./Resources/aienhancment.png" alt="AI Enhancements and Updates">
                     <div class="article-info">
                         <div class="article-date font-inter">June, 2024</div>
-                        <div class="article-title font-inter" title="AI Enhancements and Updates">AI Enhancements and
-                            Updates</div>
+                        <div class="article-title font-inter" title="AI Enhancements and Updates">AI Enhancements and Updates</div>
                     </div>
                 </div>
             </div>
@@ -777,165 +703,125 @@
     </div>
 
    <!-- footer -->
-<div class="footer font-inter">
-    <div>
-        <h4><a href="home-loader.html">NAVIGATE</a></h4>
-        <ul>
-            <li><a href="home-loader.html">Home</a></li>
-            <li><a href="services-loader.html">Services</a></li>
-            <li><a href="contact-loader.html">Contact Us</a></li>
-        </ul>
-    </div>
-    <div>
-        <h4><a href="aboutus-loader.html">COMPANY INFO</a></h4>
-        <ul>
-            <li><a href="aboutus-loader.html">About Imaven</a></li>
-            <li><a href="whyimaven-loader.html">Why Imaven</a></li>
-        </ul>
-    </div>
-    <div>
-        <h4><a href="help-loader.html">RESOURCES</a></h4>
-        <ul>
-            <li><a href="help-loader.html">Help & FAQ</a></li>
-            <li><a href="sitemap-loader.html">Sitemap</a></li>
-            <li><a href="#">Cookies</a></li>
-        </ul>
-    </div>
-    <div>
-        <h4><a href="policies-loader.html">POLICIES</a></h4>
-        <ul>
-            <li><a href="policies-loader.html">Trade Mark</a></li>
-            <li><a href="policies-loader.html">Terms of Service</a></li>
-            <li><a href="policies-loader.html">Privacy Policy</a></li>
-            <li><a href="policies-loader.html">Copyright Protection</a></li>
-            <li><a href="policies-loader.html">Disclaimers</a></li>
-            <li><a href="policies-loader.html">Accessibility Compliance Statement</a></li>
-        </ul>
-    </div>
-    <div>
-        <h4><a href="contact-loader.html">CONNECT WITH US</a></h4>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=61553697504167"><img src="./Resources/facebook-icon.svg" alt="Facebook"></a>
-            <a href="https://www.linkedin.com/in/imaven-ai-85a4792ab/"><img src="./Resources/linkedin-icon.svg" alt="LinkedIn"></a>
-            <a href="https://x.com/imavenai"><img src="./Resources/twitter-icon.svg" alt="X (formerly Twitter)"></a>
-            <a href="https://www.instagram.com/imavenai/"><img src="./Resources/instagram.svg" alt="instagram"></a>
-            <a href="https://www.tiktok.com/@imavenai"><img src="./Resources/tiktok.svg" alt="TikTok"></a>
-            <a href="https://www.youtube.com/@ImavenAi"><img src="./Resources/youtube.svg" alt="YouTube"></a>
-        </div>
-    </div>
-</div>
-<div class="footer" style="padding-top: 40px;">
-    <div style="background-color: #575757;width: 100%;height: 0.5px;">
-        <span>&nbsp;</span>
-    </div>
-</div>
-<div class="footer copyright">
-    <div style="display: flex;flex: unset;width: 38%;align-items: center;">
-        <div class="logo-container" style="display: inline-block;width: 100px;flex:none">
-            <div class="white-logo"></div>
+    <div class="footer font-inter">
+        <div>
+            <h4><a href="home-loader.html">NAVIGATE</a></h4>
+            <ul>
+                <li><a href="home-loader.html">Home</a></li>
+                <li><a href="services-loader.html">Services</a></li>
+                <li><a href="contact-loader.html">Contact Us</a></li>
+            </ul>
         </div>
         <div>
-            <span class="font-inter">Accelerating answers, amplifying expertise</span>
+            <h4><a href="aboutus-loader.html">COMPANY INFO</a></h4>
+            <ul>
+                <li><a href="aboutus-loader.html">About Imaven</a></li>
+                <li><a href="whyimaven-loader.html">Why Imaven</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4><a href="help-loader.html">RESOURCES</a></h4>
+            <ul>
+                <li><a href="help-loader.html">Help & FAQ</a></li>
+                <li><a href="sitemap-loader.html">Sitemap</a></li>
+                <li><a href="#">Cookies</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4><a href="policies-loader.html">POLICIES</a></h4>
+            <ul>
+                <li><a href="policies-loader.html">Trade Mark</a></li>
+                <li><a href="policies-loader.html">Terms of Service</a></li>
+                <li><a href="policies-loader.html">Privacy Policy</a></li>
+                <li><a href="policies-loader.html">Copyright Protection</a></li>
+                <li><a href="policies-loader.html">Disclaimers</a></li>
+                <li><a href="policies-loader.html">Accessibility Compliance Statement</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4><a href="contact-loader.html">CONNECT WITH US</a></h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61553697504167"><img src="./Resources/facebook-icon.svg" alt="Facebook"></a>
+                <a href="https://www.linkedin.com/in/imaven-ai-85a4792ab/"><img src="./Resources/linkedin-icon.svg" alt="LinkedIn"></a>
+                <a href="https://x.com/imavenai"><img src="./Resources/twitter-icon.svg" alt="X (formerly Twitter)"></a>
+                <a href="https://www.instagram.com/imavenai/"><img src="./Resources/instagram.svg" alt="instagram"></a>
+                <a href="https://www.tiktok.com/@imavenai"><img src="./Resources/tiktok.svg" alt="TikTok"></a>
+                <a href="https://www.youtube.com/@ImavenAi"><img src="./Resources/youtube.svg" alt="YouTube"></a>
+            </div>
         </div>
     </div>
-    <div style="text-align: right;">
-        <p class="font-inter">Copyright &copy; 2024, imavenai.com</p>
+    <div class="footer" style="padding-top: 40px;">
+        <div style="background-color: #575757;width: 100%;height: 0.5px;">
+            <span>&nbsp;</span>
+        </div>
     </div>
-</div>
-
-<!-- <div class="chatbot-button" onclick="openChatbot()">
-    <img src="./Resources/needhelp.svg" alt="Chatbot" />
-</div>
-
-<div class="chatbot-container" id="chatbot">
-    <div class="content">         
-        <iframe src="path/to/your/chatbot-loader.html" width="100%" height="100%"></iframe>
+    <div class="footer copyright">
+        <div style="display: flex;flex: unset;width: 38%;align-items: center;">
+            <div class="logo-container" style="display: inline-block;width: 100px;flex:none">
+                <div class="white-logo"></div>
+            </div>
+            <div>
+                <span class="font-inter">Accelerating answers, amplifying expertise</span>
+            </div>
+        </div>
+        <div style="text-align: right;">
+            <p class="font-inter">Copyright &copy; 2024, imavenai.com</p>
+        </div>
     </div>
-</div> -->
 
-<script>
-    // function openChatbot() {
-    //     var chatbot = document.getElementById('chatbot');
-    //     if (chatbot.style.display === 'none' || chatbot.style.display === '') {
-    //         chatbot.style.display = 'block';
-    //     } else {
-    //         chatbot.style.display = 'none';
-    //     }
-    // }
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('DOM fully loaded and parsed');
 
-    document.addEventListener('DOMContentLoaded', function () {
-        console.log('DOM fully loaded and parsed');
+            const items = document.querySelectorAll('.carousel-item');
+            const nextButton = document.getElementById('next');
+            const prevButton = document.getElementById('prev');
+            const searchButton = document.getElementById('searchButton');
+            const searchInput = document.getElementById('searchInput');
 
-        const items = document.querySelectorAll('.carousel-item');
-        const hamburger = document.getElementById('hamburger');
-        const mobileNav = document.getElementById('mobile-nav');
-        const searchButton = document.getElementById('searchButton');
-        const searchInput = document.getElementById('searchInput');
+            if (!items || !nextButton || !prevButton || !searchButton || !searchInput) {
+                console.error('One or more elements are missing:', {
+                    items,
+                    nextButton,
+                    prevButton,
+                    searchButton,
+                    searchInput
+                });
+                return;
+            }
 
-        if (!items || !hamburger || !mobileNav || !searchButton || !searchInput) {
-            console.error('One or more elements are missing:', {
-                items,
-                hamburger,
-                mobileNav,
-                searchButton,
-                searchInput
-            });
-            return;
-        }
+            let currentItem = 0;
 
-        let currentItem = 0;
-
-        const nextButton = document.getElementById('next');
-        if (nextButton) {
             nextButton.addEventListener('click', () => {
                 items[currentItem].classList.remove('active');
                 currentItem = (currentItem + 1) % items.length;
                 items[currentItem].classList.add('active');
             });
-        } else {
-            console.warn('Next button not found');
-        }
 
-        const prevButton = document.getElementById('prev');
-        if (prevButton) {
             prevButton.addEventListener('click', () => {
                 items[currentItem].classList.remove('active');
                 currentItem = (currentItem - 1 + items.length) % items.length;
                 items[currentItem].classList.add('active');
             });
-        } else {
-            console.warn('Previous button not found');
-        }
 
-        hamburger.addEventListener('click', () => {
-            if (mobileNav.classList.contains('open')) {
-                mobileNav.classList.remove('open');
-                mobileNav.style.display = 'none';
-            } else {
-                mobileNav.classList.add('open');
-                mobileNav.style.display = 'flex';
-            }
-            hamburger.classList.toggle('open');
-        });
+            searchButton.addEventListener('click', function () {
+                const query = searchInput.value;
+                console.log('Searching for:', query);
+                alert('Searching for: ' + query);
+                // Add your search functionality here
+            });
 
-        searchButton.addEventListener('click', function () {
-            const query = searchInput.value;
-            console.log('Searching for:', query);
-            alert('Searching for: ' + query);
-            // Add your search functionality here
-        });
-
-        document.querySelectorAll('.category').forEach(category => {
-            category.addEventListener('click', function () {
-                const query = this.textContent;
-                searchInput.value = query;
-                console.log('Selected category:', query);
-                alert('Selected category: ' + query);
-                // Add your category search functionality here
+            document.querySelectorAll('.category').forEach(category => {
+                category.addEventListener('click', function () {
+                    const query = this.textContent;
+                    searchInput.value = query;
+                    console.log('Selected category:', query);
+                    alert('Selected category: ' + query);
+                    // Add your category search functionality here
+                });
             });
         });
-    });
-</script>
+    </script>
 </body>
 
 </html>
