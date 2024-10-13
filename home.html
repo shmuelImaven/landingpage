@@ -90,6 +90,23 @@
         .chatbot-container .content {
             padding: 20px;
         }
+
+        .carousel-wrapper {
+        max-width: 1400px;
+        margin: 0 auto;
+        }
+
+        .carousel-button {
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .carousel-button div {
+            width: 60px;
+            height: 60px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 
@@ -524,13 +541,13 @@
                 &nbsp;
             </div>
         </div>
-        <div style="display: flex;align-items: center;">
-            <div class="carousel-button" id="prev">
+        <div class="carousel-wrapper" style="display: flex; align-items: center; justify-content: center; position: relative;">
+            <div class="carousel-button" id="prev" style="position: absolute; left: 0; z-index: 2;">
                 <div style="background-image: url(./Resources/arrow-left.svg);"></div>
             </div>
-            <div class="carousel-container">
+            <div class="carousel-container" style="width: 80%; margin: 0 auto;">
                 <div class="carousel-item active">
-                    <p class="font-inter" style="width: 40%;">Joining Imaven has transformed how I offer my services.
+                    <p class="font-inter" style="width: 50%;">Joining Imaven has transformed how I offer my services.
                         The platform's user-friendly interface allows me to connect with clients quickly, making it possible to provide
                         rapid responses and efficient advice. It's truly streamlined my workflow and increased client satisfaction.</p>
                     <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
@@ -542,7 +559,7 @@
                     </div>
                 </div>               
                 <div class="carousel-item">
-                    <p class="font-inter" style="width: 40%;">Imaven has been a game-changer for managing my coaching sessions.
+                    <p class="font-inter" style="width: 50%;">Imaven has been a game-changer for managing my coaching sessions.
                         The tools are intuitive and the AI assists wonderfully in organizing my schedule.
                         I can focus more on providing quality advice rather than on administrative tasks.
                         Highly recommended for professionals looking to expand their reach</p>
@@ -555,7 +572,7 @@
                     </div>    
                 </div>  
                 <div class="carousel-item">
-                    <p class="font-inter" style="width: 40%;">The ease of use and the speed with which I can connect with clients on Imaven
+                    <p class="font-inter" style="width: 50%;">The ease of use and the speed with which I can connect with clients on Imaven
                         is unmatched. The platform's design is top-notch, facilitating a smooth advisory process.
                         This is how modern consultancy should be – quick, secure, and effective.</p>
                     <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
@@ -567,7 +584,7 @@
                     </div>      
                 </div>              
                 <div class="carousel-item">
-                    <p class="font-inter" style="width: 40%;">I've used several platforms before, but Imaven stands out for its swift
+                    <p class="font-inter" style="width: 50%;">I've used several platforms before, but Imaven stands out for its swift
                         matchmaking and superb organizational tools. It allows me to provide personalized advice efficiently, 
                         enhancing my interaction with each client. Definitely a boost for my career coaching services.</p>
                     <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
@@ -579,7 +596,7 @@
                     </div> 
                 </div>  
                 <div class="carousel-item">
-                    <p class="font-inter" style="width: 40%;">Imaven provides all the tools I need to operate efficiently and help my
+                    <p class="font-inter" style="width: 50%;">Imaven provides all the tools I need to operate efficiently and help my
                         clients make informed decisions quickly. The platform's integration of AI makes it easy to manage multiple clients, 
                         maintaining a high standard of personalized advice.</p>
                     <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
@@ -591,7 +608,7 @@
                     </div> 
                 </div>  
                 <div class="carousel-item">
-                    <p class="font-inter" style="width: 40%;">The guidance I received from my financial advisor on Imaven was incredibly
+                    <p class="font-inter" style="width: 50%;">The guidance I received from my financial advisor on Imaven was incredibly
                         fast and precisely what I needed to steer my startup in the right direction. Signing up was easy, and
                         the advisor was not only knowledgeable but also very responsive.</p>
                     <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
@@ -603,7 +620,7 @@
                     </div> 
                 </div>  
                 <div class="carousel-item">
-                    <p class="font-inter" style="width: 40%;">I was amazed at how quickly I was able to connect with a life coach who really
+                    <p class="font-inter" style="width: 50%;">I was amazed at how quickly I was able to connect with a life coach who really
                         understands my challenges. Imaven made it easy to start the conversation, and my coach has been
                         instrumental in helping me achieve my goals efficiently.</p>
                     <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
@@ -615,7 +632,7 @@
                     </div> 
                 </div>  
                 <div class="carousel-item">
-                    <p class="font-inter" style="width: 40%;">Finding a shopping advisor who understands my taste and budget on Imaven was
+                    <p class="font-inter" style="width: 50%;">Finding a shopping advisor who understands my taste and budget on Imaven was
                         effortless. The platform is user-friendly, and I received excellent advice that helped me make
                         smart purchases quickly. A fantastic service that I highly recommend!</p>
                     <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
@@ -627,7 +644,7 @@
                     </div> 
                 </div>  
                 <div class="carousel-item">
-                    <p class="font-inter" style="width: 40%;">The speed at which I found a wellness coach ready to help me on Imaven was
+                    <p class="font-inter" style="width: 50%;">The speed at which I found a wellness coach ready to help me on Imaven was
                         astounding. The platform is straightforward to navigate, and the interaction with my coach was
                         smooth and productive. It's been an empowering experience.</p>
                     <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
@@ -639,7 +656,7 @@
                     </div> 
                 </div>  
                 <div class="carousel-item">
-                    <p class="font-inter" style="width: 40%;">I needed quick advice on home decor and stumbled upon Imaven. The process was
+                    <p class="font-inter" style="width: 50%;">I needed quick advice on home decor and stumbled upon Imaven. The process was
                         incredibly simple from start to finish, and I got fantastic, personalized advice from an expert
                         in no time. The platform's efficiency is truly commendable.</p>
                     <div style="display: flex; align-items: center; margin-top: 75px; margin-bottom: 75px;">
@@ -651,7 +668,7 @@
                     </div> 
                 </div>  
             </div>
-            <div class="carousel-button" id="next">
+            <div class="carousel-button" id="next" style="position: absolute; right: 0; z-index: 2;">
                 <div style="background-image: url(./Resources/arrow-right.svg);"></div>
             </div>
         </div>
