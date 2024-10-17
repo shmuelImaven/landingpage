@@ -322,16 +322,12 @@
             console.log('DOM fully loaded and parsed');
 
             const items = document.querySelectorAll('.carousel-item');
-            const hamburger = document.getElementById('hamburger');
-            const mobileNav = document.getElementById('mobile-nav');
             const searchButton = document.getElementById('searchButton');
             const searchInput = document.getElementById('searchInput');
 
-            if (!items || !hamburger || !mobileNav || !searchButton || !searchInput) {
+            if (!items || !searchButton || !searchInput) {
                 console.error('One or more elements are missing:', {
                     items,
-                    hamburger,
-                    mobileNav,
                     searchButton,
                     searchInput
                 });
