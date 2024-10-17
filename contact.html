@@ -338,15 +338,11 @@
         document.addEventListener('DOMContentLoaded', function () {
             console.log('DOM fully loaded and parsed');
 
-            const hamburger = document.getElementById('hamburger');
-            const mobileNav = document.getElementById('mobile-nav');
             const searchButton = document.getElementById('searchButton');
             const searchInput = document.getElementById('searchInput');
 
             if (!hamburger || !mobileNav || !searchButton || !searchInput) {
                 console.error('One or more elements are missing:', {
-                    hamburger,
-                    mobileNav,
                     searchButton,
                     searchInput
                 });
