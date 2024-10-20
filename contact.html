@@ -10,6 +10,13 @@
     <link rel="stylesheet" type="text/css" href="https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget.css?api_key=api_key1">
     <script src="https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget?api_key=api_key1"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        // Initialize EmailJS with your user ID
+        (function () {
+            emailjs.init("p9w9tLn-63_zYsHJV"); // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
+        })();
+    </script>
     <style>
         .footer h4 a, .header .nav-links a {
             color: inherit;
@@ -97,8 +104,6 @@
         }
     </style>
 </head>
-
-<body>
 
 <div class="top-header"></div>
 
@@ -266,7 +271,7 @@
             <label for="message">Message <span class="required">*</span></label>
             <textarea id="message" name="message" required></textarea>
             
-            <button type="button" class="submit-button" onclick="sendEmail()">Send Message</button>
+            <button type="submit" class="submit-button">Send Message</button>
         </form>
     </div>
 
@@ -336,20 +341,66 @@
             <p class="font-inter">Copyright &copy; 2024, imavenai.com</p>
         </div>
     </div>
-
     <script>
-        function sendEmail() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('DOM fully loaded and parsed');
 
-            const mailtoLink = `mailto:support@imavenai.com?subject=Contact%20Form%20Submission&body=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0APhone:%20${encodeURIComponent(phone)}%0AMessage:%20${encodeURIComponent(message)}`;
+            const searchButton = document.getElementById('searchButton');
+            const searchInput = document.getElementById('searchInput');
 
-            window.location.href = mailtoLink;
-        }
+            if (!searchButton || !searchInput) {
+                console.error('One or more elements are missing:', {
+                    searchButton,
+                    searchInput
+                });
+                return;
+            }
+
+            searchButton.addEventListener('click', function () {
+                const query = searchInput.value;
+                console.log('Searching for:', query);
+                alert('Searching for: ' + query);
+                // Add your search functionality here
+            });
+
+            document.querySelectorAll('.category').forEach(category => {
+                category.addEventListener('click', function () {
+                    const query = this.textContent;
+                    searchInput.value = query;
+                    console.log('Selected category:', query);
+                    alert('Selected category: ' + query);
+                    // Add your category search functionality here
+                });
+            });
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+
+        // Define the template parameters for EmailJS
+        const templateParams = {
+            name: name,
+            email: email,
+            phone: phone,
+            message: message
+        };
+
+        // Send the email using EmailJS
+        emailjs.send('service_796lk8q', 'template_29ksomt', templateParams) // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID'
+            .then(function (response) {
+                alert('Message sent successfully!');
+                console.log('SUCCESS!', response.status, response.text);
+            }, function (error) {
+                alert('Failed to send message. Please try again.');
+                console.log('FAILED...', error);
+            });
+    });
+        });
     </script>
-
 </body>
 
 </html>
