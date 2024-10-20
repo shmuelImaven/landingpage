@@ -98,6 +98,8 @@
     </style>
 </head>
 
+<body>
+
 <div class="top-header"></div>
 
 <header class="main-header">
@@ -251,7 +253,7 @@
         <h2>Contact Us</h2>
         <h3>Send us a Message</h3>
         
-        <form>
+        <form id="contact-form">
             <label for="name">Name <span class="required">*</span></label>
             <input type="text" id="name" name="name" required>
             
@@ -264,7 +266,7 @@
             <label for="message">Message <span class="required">*</span></label>
             <textarea id="message" name="message" required></textarea>
             
-            <button type="submit" class="submit-button">Send Message</button>
+            <button type="button" class="submit-button" onclick="sendEmail()">Send Message</button>
         </form>
     </div>
 
@@ -334,39 +336,20 @@
             <p class="font-inter">Copyright &copy; 2024, imavenai.com</p>
         </div>
     </div>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            console.log('DOM fully loaded and parsed');
+        function sendEmail() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
 
-            const searchButton = document.getElementById('searchButton');
-            const searchInput = document.getElementById('searchInput');
+            const mailtoLink = `mailto:support@imavenai.com?subject=Contact%20Form%20Submission&body=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0APhone:%20${encodeURIComponent(phone)}%0AMessage:%20${encodeURIComponent(message)}`;
 
-            if (!searchButton || !searchInput) {
-                console.error('One or more elements are missing:', {
-                    searchButton,
-                    searchInput
-                });
-                return;
-            }
-
-            searchButton.addEventListener('click', function () {
-                const query = searchInput.value;
-                console.log('Searching for:', query);
-                alert('Searching for: ' + query);
-                // Add your search functionality here
-            });
-
-            document.querySelectorAll('.category').forEach(category => {
-                category.addEventListener('click', function () {
-                    const query = this.textContent;
-                    searchInput.value = query;
-                    console.log('Selected category:', query);
-                    alert('Selected category: ' + query);
-                    // Add your category search functionality here
-                });
-            });
-        });
+            window.location.href = mailtoLink;
+        }
     </script>
+
 </body>
 
 </html>
