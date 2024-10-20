@@ -10,11 +10,13 @@
     <link rel="stylesheet" type="text/css" href="https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget.css?api_key=api_key1">
     <script src="https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget?api_key=api_key1"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
-        // Initialize EmailJS with your user ID
-        (function () {
-            emailjs.init("4mGDNrr4dtLaDK48HX72H"); // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "p9w9tLn-63_zYsHJV",
+            });
         })();
     </script>
     <style>
