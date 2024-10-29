@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iMaven - Expert Advice at Your Fingertips</title>
+    
+    <!-- External Styles and Scripts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Inria+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget.css?api_key=api_key1">
     <script src="https://imavenwidget-ece5b15ded2b.herokuapp.com/files/widget?api_key=api_key1"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
-    <title>iMaven - Expert Advice at Your Fingertips</title>
+    
+    <!-- EmailJS Script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("p9w9tLn-63_zYsHJV"); // Replace with your actual public key
+        })();
+    </script>
+
+    <!-- Mobile Styles -->
     <link rel="stylesheet" href="styles_mobile.css">
     <style>
         .contact-container {
@@ -67,6 +79,7 @@
 </head>
 
 <body>
+    <!-- Header and Navigation -->
     <header class="header" style="display: flex; justify-content: space-between; align-items: center; background-color: #0560b5; padding: 10px 20px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
         <div class="logo-container" style="z-index: 1;">
             <div class="blue-logo"></div>
@@ -79,36 +92,14 @@
         </button>
     </header>
     
-    <nav class="mobile-nav" id="mobile-nav">
-        <div class="mobile-nav-header">
-            <div class="logo-container">
-                <div class="blue-logo"></div>
-            </div>
-            <button class="close-menu" id="close-menu">×</button>
-        </div>
-        <div class="mobile-nav-content">
-            <a href="home-loader.html"><i class="icon-home"></i>Home</a>
-            <a href="contact-loader.html"><i class="icon-contact"></i>Contact</a>
-            <a href="companyinfo-loader.html"><i class="icon-info"></i>Company info</a>
-            <a href="aboutus-loader.html"><i class="icon-about"></i>About Us</a>
-            <a href="benefits-loader.html"><i class="icon-benefits"></i>Benefits</a>
-            <a href="services-loader.html"><i class="icon-services"></i>Services</a>
-            <a href="whyimaven-loader.html"><i class="icon-choose"></i>Why iMaven</a>
-            <a href="policies-loader.html"><i class="icon-polices"></i>Polices</a>
-            <a href="insight-loader.html"><i class="icon-insight"></i>Insight</a>
-            <a href="flow-loader.html"><i class="icon-flow"></i>Flow</a>
-            <a href="help-loader.html"><i class="icon-help"></i>Help</a>
-        </div>
-    </nav>
-
-    <section class="banner" style="background-image: url('./Resources/background_contact.jpg'); background-size: cover; background-position: center; color: #ffffff;">
-    </section>
+    <!-- Contact Form Section -->
+    <section class="banner" style="background-image: url('./Resources/background_contact.jpg'); background-size: cover; background-position: center; color: #ffffff;"></section>
 
     <div class="contact-container">
         <h2>Contact Us</h2>
         <h3>Send us a Message</h3>
         
-        <form>
+        <form id="contact-form">
             <label for="name">Name <span class="required">*</span></label>
             <input type="text" id="name" name="name" required>
             
@@ -169,6 +160,38 @@
             <p style="margin: 5px 0;">Copyright © 2024, imavenai.com</p>
         </div>
     </footer>
-    <script src="Humburger.js"></script>
+
+    <!-- Form Submission Script for Email -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent default form submission
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const message = document.getElementById('message').value;
+
+                // Define the template parameters for EmailJS
+                const templateParams = {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    message: message
+                };
+
+                // Send the email using EmailJS
+                emailjs.send('service_796lk8q', 'template_29ksomt', templateParams)
+                    .then(function (response) {
+                        alert('Message sent successfully!');
+                        console.log('SUCCESS!', response.status, response.text);
+                    }, function (error) {
+                        alert('Failed to send message. Please try again.');
+                        console.log('FAILED...', error);
+                    });
+            });
+        });
+    </script>
 </body>
 </html>
