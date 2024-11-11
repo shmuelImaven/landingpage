@@ -3,84 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iMaven - Expert Advice at Your Fingertips</title>
-    
-    <!-- External Styles and Scripts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Inria+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://urchin-app-t9sq7.ondigitalocean.app/files/widget.css?api_key=api_key_imavenBot">
     <script src="https://urchin-app-t9sq7.ondigitalocean.app/files/widget?api_key=api_key_imavenBot"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
-    
-    <!-- EmailJS Script -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init("p9w9tLn-63_zYsHJV"); // Replace with your actual public key
-        })();
-    </script>
-
-    <!-- Mobile Styles -->
+    <title>iMaven - Expert Advice at Your Fingertips</title>
     <link rel="stylesheet" href="styles_mobile.css">
-    <style>
-        .contact-container {
-            max-width: 100%;
-            margin: 0;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px 10px 0 0;
-            margin-top: -50px;
-            position: relative;
-        }
-        .contact-container h2 {
-            color: #0560b5;
-            margin-top: 0;
-        }
-        .contact-container input[type="text"],
-        .contact-container input[type="email"],
-        .contact-container input[type="tel"],
-        .contact-container textarea {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        .contact-container textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-        .contact-container label {
-            display: block;
-            margin-top: 10px;
-            color: #555;
-        }
-        .contact-container .required {
-            color: #e74c3c;
-        }
-        .submit-button {
-            background-color: #0560b5;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            display: block;
-            margin: 20px 0 0;
-            font-size: 16px;
-        }
-        .submit-button:hover {
-            background-color: #044e8f;
-        }
-        .banner {
-            height: 200px;
-        }
-    </style>
 </head>
 
 <body>
-    <!-- Header and Navigation -->
-    <header class="header" style="display: flex; justify-content: space-between; align-items: center; background-color: #0560b5; padding: 10px 20px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
+    <header class="header" style="display: flex; justify-content: space-between; align-items: center; background-color: #083667; padding: 10px 20px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
         <div class="logo-container" style="z-index: 1;">
             <div class="blue-logo"></div>
         </div>
@@ -91,32 +23,55 @@
             <span class="hamburger-lines"></span>
         </button>
     </header>
-    
-    <!-- Contact Form Section -->
-    <section class="banner" style="background-image: url('./Resources/background_contact.jpg'); background-size: cover; background-position: center; color: #ffffff;"></section>
 
-    <div class="contact-container">
-        <h2>Contact Us</h2>
+    <nav class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-header">
+            <div class="logo-container">
+                <div class="blue-logo"></div>
+            </div>
+            <button class="close-menu" id="close-menu">×</button>
+        </div>
+        <div class="mobile-nav-content">
+            <a href="home-loader.html"><i class="icon-home"></i>Home</a>
+            <a href="contact-loader.html"><i class="icon-contact"></i>Contact</a>
+            <a href="companyinfo-loader.html"><i class="icon-info"></i>Company info</a>
+            <a href="aboutus-loader.html"><i class="icon-about"></i>About Us</a>
+            <a href="benefits-loader.html"><i class="icon-benefits"></i>Benefits</a>
+            <a href="services-loader.html"><i class="icon-services"></i>Services</a>
+            <a href="whyimaven-loader.html"><i class="icon-choose"></i>Why iMaven</a>
+            <a href="policies-loader.html"><i class="icon-polices"></i>Polices</a>
+            <a href="insight-loader.html"><i class="icon-insight"></i>Insight</a>
+            <a href="flow-loader.html"><i class="icon-flow"></i>Flow</a>
+            <a href="help-loader.html"><i class="icon-help"></i>Help</a>
+        </div>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <section class="banner" style="background-image: url('./Resources/background_contact.jpg'); background-size: cover; background-position: center; color: #ffffff; height: 200px;"></section>
+
+    <div class="contact-container" style="max-width: 100%; margin: 0; background: #fff; padding: 20px; border-radius: 10px 10px 0 0; margin-top: -50px; position: relative;">
+        <h2 style="color: #0560b5; margin-top: 0;">Contact Us</h2>
         <h3>Send us a Message</h3>
         
         <form id="contact-form">
             <label for="name">Name <span class="required">*</span></label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required style="width: calc(100% - 20px); padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
             
             <label for="email">Email <span class="required">*</span></label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required style="width: calc(100% - 20px); padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
             
             <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone">
+            <input type="tel" id="phone" name="phone" style="width: calc(100% - 20px); padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
             
             <label for="message">Message <span class="required">*</span></label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" required style="width: calc(100% - 20px); padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; min-height: 100px; resize: vertical;"></textarea>
             
-            <button type="submit" class="submit-button">Send Message</button>
+            <button type="submit" class="submit-button" style="background-color: #0560b5; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; width: 100%; display: block; margin: 20px 0 0; font-size: 16px;">Send Message</button>
         </form>
     </div>
 
     <footer class="footer" style="background-color: #010207; color: #ffffff; padding: 20px; font-family: Arial, sans-serif;">
+        <!-- Footer content remains exactly the same -->
         <div class="footer-section">
             <h4 style="color: #ffffff; font-size: 14px; margin-bottom: 5px;">NAVIGATE</h4>
             <p style="margin: 5px 0;"><a href="home-loader.html" style="color: #ffffff; text-decoration: none;">Home</a></p>
@@ -161,19 +116,25 @@
         </div>
     </footer>
 
-    <!-- Form Submission Script for Email -->
+    <!-- EmailJS initialization -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("p9w9tLn-63_zYsHJV");
+        })();
+    </script>
+
+    <!-- Form Submission Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('contact-form').addEventListener('submit', function (event) {
-                event.preventDefault(); // Prevent default form submission
+                event.preventDefault();
                 
-                // Get form values
                 const name = document.getElementById('name').value;
                 const email = document.getElementById('email').value;
                 const phone = document.getElementById('phone').value;
                 const message = document.getElementById('message').value;
 
-                // Define the template parameters for EmailJS
                 const templateParams = {
                     name: name,
                     email: email,
@@ -181,7 +142,6 @@
                     message: message
                 };
 
-                // Send the email using EmailJS
                 emailjs.send('service_796lk8q', 'template_29ksomt', templateParams)
                     .then(function (response) {
                         alert('Message sent successfully!');
@@ -193,5 +153,8 @@
             });
         });
     </script>
+
+    <!-- Navigation Script -->
+    <script src="Humburger.js"></script>
 </body>
 </html>
