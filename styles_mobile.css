@@ -1,3 +1,12 @@
+.chatbot-widget-container {
+    position: fixed; /* Ensures it's positioned relative to the viewport */
+    bottom: 0; /* Position it at the bottom */
+    right: 20px; /* Adjust position from the right */
+    z-index: 10002; /* Higher than any other elements */
+    width: 100%; /* Adjust width as needed */
+    max-width: 400px; /* Optional, for responsiveness */
+}
+
 .section-title {
     font-size: 24px;
     color: #034268;
