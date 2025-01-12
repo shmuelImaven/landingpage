@@ -74,57 +74,135 @@
                     <img src="./Resources/email-97.svg" alt="Contact" class="nav-icon">
                     Contact
                 </a>
+            </nav>
+            <div class="dashboard-links-container">
+                <div class="dashboard-button user-platform">
+                    <img src="./Resources/signup-icon.svg" alt="Dashboard" class="dashboard-icon">
+                    <a href="https://platform.imavenai.com/">User platform</a>
+                </div>
+                <div class="dashboard-button advisor-dashboard">
+                    <img src="./Resources/signup-icon.svg" alt="Dashboard" class="dashboard-icon">
+                    <a href="https://experts.imavenai.com/">Adviser dashboard</a>
+                </div>
             </div>
-        </div>
-        <div class="auth-links font-inter">
-            <div class="dashboard-link-container">
-                <div class="auth-link" style="background-image: url('./Resources/signup-icon.svg');"></div>
-                <a href="https://platform.imavenai.com" class="dashboard-link">Access Your Personalized Dashboard</a>
-            </div>
-        </div>
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-    
-    <style>
-        .nav-links a {
+        </header>
+        
+        
+        <style>
+            body {
+                margin: 0;
+                font-family: 'Inter', sans-serif;
+                padding-top: 60px;
+            }
+        
+            .main-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 20px;
+                background-color: #ffffff;
+                border-bottom: 1px solid #e0e0e0;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+            }
+        
+            .logo-container {
+                display: flex;
+                align-items: center;
+            }
+        
+            .logo {
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+            }
+        
+            .logo-text {
+                font-weight: bold;
+                font-size: 16px;
+                color: #5387bd;
+                white-space: nowrap;
+            }
+        
+            .nav-links {
+                display: flex;
+                gap: 30px;
+            }
+        
+            .nav-item {
+                display: flex;
+                align-items: center;
+                color: #1e2a3f;
+                text-decoration: none;
+                font-size: 16px;
+            }
+        
+            .nav-icon {
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
+            }
+            .dashboard-links-container {
             display: flex;
             align-items: center;
-            color: inherit;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-    
-        .nav-links a:hover {
-            color: #2773d6;
-        }
-    
-        .nav-icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-        }
-    
-        .dashboard-link-container {
-            display: flex;
-            align-items: center;
-            white-space: nowrap;
-        }
-    
-        .dashboard-link {
-            color: #0b3974;
-            text-decoration: none;
-            font-weight: bold;
-            margin-left: 10px;
-            transition: color 0.3s ease;
-        }
-    
-        .dashboard-link:hover {
-            color: #5a9de6;
-            text-decoration: underline;
+            gap: 20px;
+            }
+        
+            .dashboard-button {
+                display: flex;
+                align-items: center;
+                padding: 8px 16px;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+                border: 1px solid transparent;
+                background-color: white;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+        
+            .dashboard-button:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+        
+            .dashboard-icon {
+                width: 16px;
+                height: 16px;
+                margin-right: 8px;
+            }
+        
+            .dashboard-button.user-platform {
+                border-color: #138e6b;
+            }
+        
+            .dashboard-button.user-platform a {
+                color:#2e2e2e;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        
+            .dashboard-button.advisor-dashboard {
+                border-color: #2e2e2e;
+            }
+        
+            .dashboard-button.advisor-dashboard a {
+                color: #2e2e2e;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        
+            .dashboard-button:hover a {
+                color: #2e2e2e;
+            }
+        
+            @media (max-width: 768px) {
+            .nav-links, .dashboard-links-container {
+                display: none;
+            }
         }
     </style>
 

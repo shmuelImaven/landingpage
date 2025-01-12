@@ -97,11 +97,18 @@
             Contact
         </a>
     </nav>
-    <div class="dashboard-link">
-        <img src="./Resources/signup-icon.svg" alt="Dashboard" class="dashboard-icon">
-        <a href="https://platform.imavenai.com">Access Your Personalized Dashboard</a>
+    <div class="dashboard-links-container">
+        <div class="dashboard-button user-platform">
+            <img src="./Resources/signup-icon.svg" alt="Dashboard" class="dashboard-icon">
+            <a href="https://platform.imavenai.com/">User platform</a>
+        </div>
+        <div class="dashboard-button advisor-dashboard">
+            <img src="./Resources/signup-icon.svg" alt="Dashboard" class="dashboard-icon">
+            <a href="https://experts.imavenai.com/">Adviser dashboard</a>
+        </div>
     </div>
 </header>
+
 
 <style>
     body {
@@ -160,30 +167,65 @@
         height: 16px;
         margin-right: 5px;
     }
+    .dashboard-links-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    }
 
-    .dashboard-link {
+    .dashboard-button {
         display: flex;
         align-items: center;
+        padding: 8px 16px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .dashboard-button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .dashboard-icon {
         width: 16px;
         height: 16px;
-        margin-right: 5px;
+        margin-right: 8px;
     }
 
-    .dashboard-link a {
-        color: #366492;
+    .dashboard-button.user-platform {
+        border-color: #138e6b;
+    }
+
+    .dashboard-button.user-platform a {
+        color:#2e2e2e;
         text-decoration: none;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 600;
     }
 
-    @media (max-width: 768px) {
-        .nav-links, .dashboard-link {
-            display: none;
-        }
+    .dashboard-button.advisor-dashboard {
+        border-color: #2e2e2e;
     }
+
+    .dashboard-button.advisor-dashboard a {
+        color: #2e2e2e;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .dashboard-button:hover a {
+        color: #2e2e2e;
+    }
+
+    @media (max-width: 768px) {
+    .nav-links, .dashboard-links-container {
+        display: none;
+    }
+}
 </style>
 
 <!-- Banner Image -->
